@@ -1,0 +1,80 @@
+<view class="checkered stripes">
+  <view class="ball1"></view>
+  <view class="ball2"></view>
+  <view class="ball3"></view>
+
+  <view class="listbg">
+     
+     <view class="list">
+        
+       
+          <view class="nameandroom">
+             <view>租客姓名:{{item.rentorname}}  </view>
+             <view>  房间号:{{item.room_id}}</view>
+          </view>
+          <view class="line"></view>
+         
+          <view class="allwaterprice ">
+             <view class="shuifei iconfont icon-shuifei">水费</view>
+             <view>{{item.allwaterprice}}</view>
+          </view>
+          <view class="water">
+             <view class="water1">
+                 <view>上月用水</view>
+                 <view>{{item.old_water}}</view>
+             </view>
+             <view class="water2">
+                <view>本月用水</view>
+                <view>{{item.new_water}}</view>
+             </view>
+             <view class="water3">
+                <view>水费单价</view>
+                <view>{{item.waterprice}}</view>
+             </view>
+          </view>
+         
+          <view class="line"></view>
+          <view class="allelectricity">
+             <view class="dianfei iconfont icon-dianfeichongzhi00">电费</view>
+             <view>{{item.allelectprice}}</view>
+          </view>
+          <view class="elect">
+            <view class="elect1">
+                 <view>上月用电</view>
+                 <view>{{item.old_electricity}}</view>
+             </view>
+             <view class="elect2">
+                <view>本月用电</view>
+                <view>{{item.new_electricity}}</view>
+             </view>
+             <view class="elect3">
+                <view>电费单价</view>
+                <view>{{item.electprice}}</view>
+             </view>
+          </view>
+          <view class="line"></view>
+          <view class="roommoney">
+            <view class="block"></view>
+            <view class="fangzu iconfont icon-zhufangzujin">房租</view>
+             <view>{{item.room_money}}</view>
+          </view>
+          <view class="line"></view>
+          <view class="allmoney">
+            <view class="zongjine iconfont icon-renminbi">总金额</view>
+             <view>{{item.all_money}}</view>
+          </view>
+          <view class="time">
+              <view class="block"></view>
+              <view class="block"></view>
+              <view class="date">{{item.date}}</view>
+          </view>
+
+      
+         
+     </view>
+  </view>
+  
+</view>
+  
+
+

@@ -1,0 +1,3 @@
+
+<button bindtap="shouquan" type='primary'>获取订阅消息授权</button>
+<button bindtap="getOpenid">获取用户的openid并推送消息</button>

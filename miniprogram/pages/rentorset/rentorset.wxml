@@ -1,0 +1,146 @@
+<view class="bigbox">
+  <picker  mode="selector" name="rentorname" value="{{rentorlist[index].value}}"  bindchange="bindrentornameChange" range-key="{{'rentorname'}}"
+  range="{{rentorlist}}" >
+  <view class="functional">
+     <view class="select_name_room">
+         <view class="rentorname" bindtap="dianji">
+            <view class="rentoriconbox">
+                <view class="iconfont icon-zukeliebiao rentoricon"></view>
+            </view>
+            
+            <view class="main_namebar">
+                <view class="main_name">{{rentorlist[index].rentorname}}</view>
+            </view>
+         </view>
+
+         <view class="room_id" >
+            <view class="roomiconbox">
+                <view class="iconfont icon-fangjianhao roomicon"></view>
+            </view>
+            
+            <view class="main_roombar">
+                <view class="main_room">{{rentorlist[index].room_id}}</view>
+            </view>
+         </view>
+        
+     </view>
+     
+     
+  </view>
+    
+  </picker>
+  <view class="addiconbox">
+         <view class="addicon">
+            <view class="iconfont icon-xinzengzuke_icon" bindtap="addmodal"></view>
+         </view>
+  </view>
+
+  
+</view>
+
+
+  <view class='page-body' wx:if="{{clicknum==0}}"  wx:for="{{rentorlist}}" wx:key='id'>
+    
+    <view class='item' data-id="{{item._id}}">
+      <view class="info">
+        <view class='name iconfont icon-zukeliebiao'>{{item.rentorname}}</view>
+        <view class='room iconfont icon-fangjianhao'>{{item.room_id}}</view>
+      </view>
+      <view class="button">
+        <view class="update iconfont icon-xiugai" bindtap="modal" data-id="{{item._id}}"></view>
+        <view class="delete iconfont icon-shanchu" bindtap="delete" data-id="{{item._id}}"></view>
+      </view>
+    </view>
+  </view>
+
+   
+  <view class='page-body' wx:if="{{clicknum>0}}"  wx:for="{{tenant}}" wx:key='id'>
+    
+    <view class='item' data-id="{{item._id}}">
+      <view class="info">
+        <view class='name iconfont icon-zukeliebiao'>{{item.rentorname}}</view>
+        <view class='room iconfont icon-fangjianhao'>{{item.room_id}}</view>
+      </view>
+      <view class="button">
+        <view class="update iconfont icon-xiugai" bindtap="modal" data-id="{{item._id}}"></view>
+        <view class="delete iconfont icon-shanchu" bindtap="delete" data-id="{{item._id}}"></view>
+      </view>
+    </view>
+  </view>
+
+  <view class="Modalbox"  hidden="{{showmodal}}">
+     <view class="Modal">
+      <view class="titlebox">
+           <view class="title">修改</view>
+        </view>
+        <view class="select_name_room_tj">
+         <view class="rentorname" bindtap="dianji">
+            <view class="rentoriconbox">
+                <view class="iconfont icon-zukeliebiao rentoricon"></view>
+            </view>
+            
+            <view class="main_namebar">
+              <input type="text" name="rentorname"  bindinput="rentornameinput"></input>
+            </view>
+         </view>
+
+         <view class="room_id" >
+            <view class="roomiconbox">
+                <view class="iconfont icon-fangjianhao roomicon"></view>
+            </view>
+            
+            <view class="main_roombar">
+              <input type="text" name="room_id"  bindinput="room_idinput"></input>
+            </view>
+         </view>
+        
+    </view>
+        <view class="updatebutton">
+          <view class="cancelbtn iconfont icon-cuowu" bindtap="cancel"></view>
+          <view class="confirmbtn iconfont icon-dui" bindtap="confirm"></view>
+        </view>
+
+     </view>
+  </view>
+
+  <view class="Modalbox"  hidden="{{showaddmodal}}">
+     <view class="Modal">
+        <view class="titlebox">
+           <view class="title">添加</view>
+        </view>
+    <view class="select_name_room_tj">
+         <view class="rentorname" bindtap="dianji">
+            <view class="rentoriconbox">
+                <view class="iconfont icon-zukeliebiao rentoricon"></view>
+            </view>
+            
+            <view class="main_namebar">
+              <input type="text" name="rentorname"  bindinput="rentornameinput"></input>
+            </view>
+         </view>
+
+         <view class="room_id" >
+            <view class="roomiconbox">
+                <view class="iconfont icon-fangjianhao roomicon"></view>
+            </view>
+            
+            <view class="main_roombar">
+              <input type="text" name="room_id"  bindinput="room_idinput"></input>
+            </view>
+         </view>
+        
+    </view>
+        
+        <view class="addbutton">
+          <view class="cancelbtn iconfont icon-cuowu" bindtap="canceladd"></view>
+          <view class="confirmbtn iconfont icon-dui" bindtap="confirmadd"></view>
+        </view>
+
+         
+     </view>
+  </view>
+    
+  
+
+  
+  

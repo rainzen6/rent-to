@@ -1,0 +1,48 @@
+
+
+<view class="bg"> 
+ <view class="box">
+   <view class="bar"></view>
+
+   <view class="title">
+   <view class="bar2"></view>
+     <view class="iconbg">
+        <view class="iconfont icon-duizhangdan"></view>
+     </view>
+     <view class="titlename">Rent To</view>
+     <view class="titlebarbg">
+        <view class="titlebar"> 一个租房账单数据类的小程序 </view>
+     </view>
+   </view>
+
+   <view class="bar"></view>
+   <view class="function">
+     <view class="bar3"></view>
+     <view class="queryadd">
+       <view class="q" bindtap="goquery">
+          <view class="iconfont icon-chaxun"></view>
+          <view class="querybtn">查询</view>
+       </view>
+       <view class="a" bindtap="addDatapage">
+          <view class="iconfont icon-tianjiazhangdan"></view>
+          <view class="addbtn">添加</view>
+       </view>
+       
+     </view>
+     <view class="bar3"></view>
+     <view class="zhangdan">
+       <view class="yi" bindtap="getyishoukuan">
+          <view class="iconfont icon-yishoukuan"></view>
+          <view class="yishoukuan">已收款账单</view>
+       </view>
+       <view class="wei" bindtap="getweishoukuan">
+          <view class="iconfont icon-weishoukuan"></view>
+          <view class="weishoukuan">未收款账单</view>
+       </view>
+     </view>
+    
+   </view>
+
+ </view>
+</view>
+

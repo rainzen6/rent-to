@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/list/list",
+    "pages/addData/addData",
+    "pages/detailpage/detailpage",
+    "pages/query/query",
+    "pages/dataset/dataset",
+    "pages/rentorset/rentorset",
+    "pages/rentorandroom/rentorandroom",
+    "pages/yishoukuan/yishoukuan",
+    "pages/weishoukuan/weishoukuan",
+    "pages/sendmessage/sendmessage"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#f7f7f2",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Rent To",
+    "backgroundColor": "#fff",
+    "pageOrientation": "portrait"
+  },
+  "tabBar": {
+    "backgroundColor": "#f7f7f2",
+    "selectedColor": "#000000",
+    "color": "#bfbfbf",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "selectedIconPath": "assets/icon/首页-点中.png",
+        "iconPath": "assets/icon/首页.png"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "账单",
+        "selectedIconPath": "assets/icon/总账单-点中.png",
+        "iconPath": "assets/icon/总账单.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "个人中心",
+        "selectedIconPath": "assets/icon/我的-点中.png",
+        "iconPath": "assets/icon/我的.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

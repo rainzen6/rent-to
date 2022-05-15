@@ -1,0 +1,238 @@
+.stripes{
+  position: absolute;
+ width: 100%;
+ height: 100%;
+  
+}
+.checkered {
+  background: #7F7FD5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+
+}
+.listbg{
+  display: flex;
+  width: 90%;
+  height: 95%;
+  background: rgba(255,255,255,.3);
+  border-radius: 30rpx;
+  margin: auto ;
+  margin-top: 20rpx;
+  border: 3rpx solid rgba(255,255,255,.3);
+  box-shadow: 5rpx 5rpx 20rpx 5rpx rgba(0,0,0,.3);
+  backdrop-filter: blur(30rpx);
+  border-top: 4rpx solid rgba(255,255,255,.8);
+  border-left: 4rpx solid rgba(255,255,255,.8);
+}
+.list{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  
+}
+.titlebox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 100%;
+  height: 100rpx;
+}
+.title{
+  
+  font-size: 50rpx;
+  color: rgba(0, 0, 0,.5);
+  text-shadow: 1rpx 1rpx 3rpx rgba(255,255,255,.7);
+}
+.functional{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.rentorname{
+  
+  width: 80%;
+  display: flex;
+  border-radius: 20rpx;
+  border: 4rpx solid rgb(39, 38, 38);
+   align-items: center;
+   
+}
+
+.rentoricon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   font-size: 50rpx;
+   width: 80rpx;
+   height: 80rpx;
+   color: rgb(238, 107, 56);
+}
+.main_namebar{
+  
+  width: 400rpx;
+  font-size: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 4rpx solid #000;
+}
+
+
+.room_id{
+  
+  width: 80%;
+  display: flex;
+  border-radius: 20rpx;
+  border: 4rpx solid rgb(39, 38, 38);
+   align-items: center;
+   
+}
+
+.roomicon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   font-size: 50rpx;
+   width: 80rpx;
+   height: 80rpx;
+  color: rgb(238, 159, 41);
+}
+.main_roombar{
+  
+  width: 400rpx;
+  font-size: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 4rpx solid #000;
+}
+.select_name_room{
+  display: flex;
+  flex-direction: column;
+  
+  width: 100%;
+  height: 200rpx;
+  align-items: center;
+  justify-content: space-around;
+}
+.date{
+  display: flex;
+  flex-direction: column;
+  
+  width: 100%;
+  height: 100rpx;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.icon-shijianriqi{
+  color: rgb(46, 224, 70);
+}
+.oldwater{
+  display: flex;
+  flex-direction: column;
+  
+  width: 100%;
+  height: 100rpx;
+  align-items: center;
+  justify-content: space-around;
+}
+.newwater{
+  display: flex;
+  flex-direction: column;
+  
+  width: 100%;
+  height: 100rpx;
+  align-items: center;
+  justify-content: space-around;
+}
+.oldelect{
+  display: flex;
+  flex-direction: column;
+  
+  width: 100%;
+  height: 100rpx;
+  align-items: center;
+  justify-content: space-around;
+}
+.newelect{
+  display: flex;
+  flex-direction: column;
+  
+  width: 100%;
+  height: 100rpx;
+  align-items: center;
+  justify-content: space-around;
+}
+.roommoney{
+  display: flex;
+  flex-direction: column;
+  
+  width: 100%;
+  height: 100rpx;
+  align-items: center;
+  justify-content: space-around;
+}
+.shangyueshuifei{
+  color: rgb(34, 202, 224);
+}
+.benyueshuifei{
+  color: rgb(35, 120, 231);
+}
+.shangyueyongdian{
+  color: rgb(204, 206, 102);
+}
+.icon-zhufangzujin{
+  color: rgb(22, 155, 22);
+}
+.tjbtnbox{
+  
+  position: relative;
+  top: 100rpx;
+  width: 60%;
+  height: 100rpx;
+  border: 4rpx solid #000;
+  border-radius: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-querentijiaotijiao{
+  font-size: 60rpx;
+}
+.allwaterprice{
+  display: none;
+  visibility: hidden;
+}
+.allelectprice{
+  display: none;
+  visibility: hidden;
+}
+.all_money{
+  display: none;
+  visibility: hidden;
+}
+.waterprice{
+  display: none;
+  visibility: hidden;
+}
+.electprice{
+  display: none;
+  visibility: hidden;
+}
+.year{
+  display: none;
+  visibility: hidden;
+}
+.month{
+  display: none;
+  visibility: hidden;
+}
+.payment{
+  display: none;
+  visibility: hidden;
+}

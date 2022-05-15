@@ -1,0 +1,292 @@
+
+.Yearbar{
+  width: 100%;
+  height: 90rpx;
+  background-color: rgb(238, 237, 237);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.picker{
+  width: 100%;
+
+}
+.year_choice_bar{
+  width: 40%;
+  height: 70%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 15rpx;
+}
+
+.in_bar{
+  
+  display: flex;
+  flex-direction: row;
+  
+ 
+  
+}
+
+.iconbox{
+  width: 20%;
+  display: flex;
+ 
+  justify-content: space-around;
+  align-items: center;
+}
+.yearbox{
+  width: 80%;
+  display: flex;
+  
+  justify-content: center;
+
+}
+.display_year{
+  
+
+  font-size: 40rpx;
+ 
+
+}
+.index_tab .bottom_scroll{
+  width:100%;
+  white-space:nowrap;
+  overflow:hidden;
+  line-height:83rpx;
+}
+.index_tab .bottom_scroll .nav{
+  width:20%;
+  display:inline-block;
+  white-space:normal;
+  text-align:center;
+  color:#6f7580;
+  font-size:30rpx;
+  position: relative;
+}
+.index_tab .cur
+{
+    font-size:32rpx;
+    color: #333;
+    font-weight: bold;
+} 
+.index_tab .cur span{
+  width:50rpx;
+  height: 8rpx;
+  border-radius: 5rpx;
+  background: #ff8700;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -1px;
+}
+
+
+.page-body {
+  display: flex;
+  height: 100%;
+  width: 95%;
+  align-items: center;
+  border-radius: 30rpx;
+  margin: 10rpx;
+ background-color: rgb(238, 238, 238);
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+  width: 95%;
+  height: 200rpx;
+  border-bottom: 1rpx solid #eee;
+  
+  
+
+}
+
+.leftbar{
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10rpx;
+  border: 1rpx solid #d5d7d8;
+}
+
+.middle{
+  
+  display: flex;
+  
+  
+  width: 450rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50%;
+  
+}
+.right{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  border-radius: 10rpx;
+}
+.icon-yue1{
+  font-size: 100rpx;
+  width: 100rpx;
+  height: 100rpx;
+  
+}
+.icon-yue2{
+  font-size: 100rpx;
+  width: 100rpx;
+  height: 100rpx;
+  
+}
+.icon-yue3{
+  font-size: 100rpx;
+  width: 100rpx;
+  height: 100rpx;
+  
+}
+.icon-yue4{
+  font-size: 100rpx;
+  width: 100rpx;
+  height: 100rpx;
+  
+}
+.icon-yue5{
+  font-size: 100rpx;
+  width: 100rpx;
+  height: 100rpx;
+  
+}
+.icon-yue6{
+  font-size: 100rpx;
+  width: 100rpx;
+  height: 100rpx;
+  
+}
+.icon-yue7{
+  font-size: 100rpx;
+  width: 100rpx;
+  height: 100rpx;
+  
+}
+.icon-yue8{
+  font-size: 100rpx;
+  width: 100rpx;
+  height: 100rpx;
+  
+}
+.icon-yue9{
+  font-size: 100rpx;
+  width: 100rpx;
+  height: 100rpx;
+  
+}
+.icon-yue10{
+  font-size: 100rpx;
+  width: 100rpx;
+  height: 100rpx;
+  
+}
+.icon-yue11{
+  font-size: 100rpx;
+  width: 100rpx;
+  height: 100rpx;
+  
+}
+.icon-yue12{
+  font-size: 100rpx;
+  width: 100rpx;
+  height: 100rpx;
+  
+}
+
+
+.time{
+  
+  font-size: 30rpx;
+  height: 30rpx;
+  color: #40739e;
+}
+.delete{
+  
+  display: flex;
+  width: 100rpx;
+  justify-content: center;
+  align-items: center;
+  height: 90rpx;
+  color: red;
+  font-size: 32rpx;
+  background-color: white;
+  border-radius: 10rpx;
+  
+}
+.delete:active{
+  background-color: #ebe9e9;
+}
+.xq{
+  display: flex;
+  width: 100rpx;
+  justify-content: center;
+  align-items: center;
+  height: 90rpx;
+  color: #25CCF7;
+  font-size: 32rpx;
+  background-color: white;
+  border-radius: 10rpx;
+  
+  
+}
+.xq:active{
+  background-color: #ebe9e9;
+}
+.name{
+  display: flex;
+
+}
+.icon-zukeliebiao{
+  color: #b990e0;
+}
+.room{
+  display: flex;
+  
+}
+.icon-fangjianhao{
+  color: #f1bd4c;
+}
+.money{
+  display: flex;
+  
+}
+.icon-renminbi1{
+  color: #6cdf85;
+}
+.payment{
+  
+  display: flex;
+  
+  width: 50%;
+  flex-direction: row-reverse;
+  
+  
+}
+.icon-yiwancheng1{
+  color: #099915;
+  font-size: 50rpx;
+}
+.icon-weiwancheng1{
+  color: #e7443e;
+  font-size: 100rpx;
+}

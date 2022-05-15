@@ -1,0 +1,92 @@
+.stripes{
+  position: absolute;
+ width: 100%;
+ height: 100%;
+  
+}
+.checkered {
+  background: #7F7FD5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
+.box{
+  display: flex;
+  width: 90%;
+  height: 40%;
+  background: rgba(255,255,255,.3);
+  border-radius: 30rpx;
+  margin: auto ;
+  margin-top: 20rpx;
+  border: 3rpx solid rgba(255,255,255,.3);
+  box-shadow: 5rpx 5rpx 20rpx 5rpx rgba(0,0,0,.3);
+  backdrop-filter: blur(30rpx);
+  border-top: 4rpx solid rgba(255,255,255,.8);
+  border-left: 4rpx solid rgba(255,255,255,.8);
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.box2{
+  display: flex;
+  width: 90%;
+  height: 40%;
+  background: rgba(255,255,255,.3);
+  border-radius: 30rpx;
+  margin: auto ;
+  margin-top: 20rpx;
+  border: 3rpx solid rgba(255,255,255,.3);
+  box-shadow: 5rpx 5rpx 20rpx 5rpx rgba(0,0,0,.3);
+  backdrop-filter: blur(30rpx);
+  border-top: 4rpx solid rgba(255,255,255,.8);
+  border-left: 4rpx solid rgba(255,255,255,.8);
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  
+}
+.input{
+   height: 70rpx;
+   width: 500rpx;
+   outline: none;
+	 border: none;
+   background: #FAFAFA;
+  border-radius: 20rpx;
+}
+
+.btn{
+  position: relative;
+  left: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.icon-save01{
+  font-size: 70rpx;
+
+}
+.mess{
+  
+  font-weight: 700;
+  color: rgba(0, 0, 0,.5);
+  text-shadow: 1rpx 1rpx 3rpx rgba(255,255,255,.7);
+}
+.mess2{
+  
+  font-weight: 700;
+  color: rgba(0, 0, 0,.5);
+  text-shadow: 1rpx 1rpx 3rpx rgba(255,255,255,.7);
+}
+.item{
+  
+  font-weight: 700;
+  color: rgba(0, 0, 0,.5);
+  text-shadow: 1rpx 1rpx 3rpx rgba(255,255,255,.7);
+}

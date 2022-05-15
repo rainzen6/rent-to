@@ -1,0 +1,64 @@
+<view class='container'>
+  
+  <!--列表-->
+  <view class='page-body' wx:for="{{list}}" wx:key='id'>
+    <view class='item' data-id="{{item._id}}">
+      
+      <view class="leftbar">
+        <view wx:if="{{item.month==1}}" class="iconfont icon-yue1"></view>
+        <view wx:if="{{item.month==2}}" class="iconfont icon-yue2"></view>
+        <view wx:if="{{item.month==3}}" class="iconfont icon-yue3"></view>
+        <view wx:if="{{item.month==4}}" class="iconfont icon-yue4"></view>
+        <view wx:if="{{item.month==5}}" class="iconfont icon-yue5"></view>
+        <view wx:if="{{item.month==6}}" class="iconfont icon-yue6"></view>
+        <view wx:if="{{item.month==7}}" class="iconfont icon-yue7"></view>
+        <view wx:if="{{item.month==8}}" class="iconfont icon-yue8"></view>
+        <view wx:if="{{item.month==9}}" class="iconfont icon-yue9"></view>
+        <view wx:if="{{item.month==10}}" class="iconfont icon-yue10"></view>
+        <view wx:if="{{item.month==11}}" class="iconfont icon-yue11"></view>
+        <view wx:if="{{item.month==12}}" class="iconfont icon-yue12"></view>
+
+        <view class="year">{{item.year}}</view>
+      </view>
+
+      <view class="middle">
+        <view class="main">
+          <view class="name">
+            <view class=' iconfont icon-zukeliebiao'>  </view>
+            <view>  {{item.rentorname}}</view>
+          </view>
+          <view class="room">
+            <view class=' iconfont icon-fangjianhao'>  </view>
+            <view>  {{item.room_id}}</view>
+          </view>  
+          <view class="money">
+            <view class=' iconfont icon-renminbi1'>  </view>
+            <view>  {{item.all_money}}元</view>
+          </view>  
+        </view>
+          
+        <view class="payment ">
+          <view wx:if="{{item.payment=='true'}}" class="iconfont icon-yiwancheng1" data-id="{{item._id}}" bindtap="paymenttrue"></view>
+          <view wx:if="{{item.payment=='false'}}" class="iconfont icon-weiwancheng1" bindtap="paymentfalse" data-id="{{item._id}}"></view>
+        </view>      
+          
+      </view>    
+        
+      <view class="right"> 
+          
+          <view class="xq " bindtap="godetail" data-id="{{item._id}}">
+            <view class="iconfont icon-zhangdanxiangqing"></view>
+          </view>
+
+          <view class="delete " bindtap="delete_business" data-id="{{item._id}}">
+            <view class="iconfont icon-shanchu"></view>
+          </view>
+      </view>      
+              
+              
+          
+          
+    </view>
+  </view>
+</view>
+

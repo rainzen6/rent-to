@@ -1,0 +1,35 @@
+<view class="checkered stripes">
+   <view class="box">
+      <view class="mess">水费单价</view>
+      <view class="main">
+      
+        <input class="input" type="text" name="waterprice"  bindinput="waterpriceinput" value="{{item.waterprice}}" ></input>
+        <view class="name"></view>
+        <view class="btn">
+           <view class="iconfont icon-save01" bindtap="waterThemain" ></view>
+        </view>
+      
+      </view>
+      <view class="item" wx:for="{{waterlist}}" wx:key='id'>当前设置水单价{{item.waterprice}}</view>
+   </view>
+
+   <view class="box">
+      <view class="mess">电费单价</view>
+      <view class="main">
+      
+         <input class="input" type="text" name="electprice" bindinput="electpriceinput" value="{{item.electprice}}"></input>
+      <view class="name"></view>
+      <view class="btn">
+         <view class="iconfont icon-save01" bindtap="electThemain" ></view>
+      </view>
+     
+      </view>
+       <view class="item" wx:for="{{electlist}}" wx:key='id'>当前设置电单价{{item.electprice}}</view>
+   </view>
+</view>
+
+
+
+
+
+

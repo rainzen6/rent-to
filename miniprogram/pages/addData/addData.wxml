@@ -1,0 +1,159 @@
+
+<view class="checkered stripes">
+  <view class="listbg">
+     <view class="list">
+      <view class="titlebox">
+           <view class="title">添加账单</view>
+        </view>
+      <picker mode="selector" name="rentorname" value="{{rentorlist[index].rentorname}}"  bindchange="bindrentornameChange" range-key="{{'rentorname'}}" range="{{rentorlist}}" >
+  <view class="functional">
+     <view class="select_name_room">
+         <view class="rentorname" >
+            <view class="rentoriconbox">
+                <view class="iconfont icon-zukeliebiao rentoricon"></view>
+            </view>
+            
+            <view class="main_namebar">
+              <view>{{rentorlist[index].rentorname}}</view>
+                
+            </view>
+         </view>
+
+         <view class="room_id" >
+            <view class="roomiconbox">
+                <view class="iconfont icon-fangjianhao roomicon"></view>
+            </view>
+            
+            <view class="main_roombar">
+               <view>{{rentorlist[index].room_id}}</view>
+                
+            </view>
+         </view>
+        
+     </view>
+     
+     
+  </view>
+  </picker>
+  
+  
+  <picker name="date" mode="date" value="{{date}}" start="2015-09-01" end="2030-09-01" bindchange="bindDateChange">
+  <view class="date">
+       <view class="room_id" >
+            <view class="roomiconbox">
+                <view class="iconfont icon-shijianriqi roomicon"></view>
+            </view>
+            
+            <view class="main_roombar">
+               {{date}}
+               
+            </view>
+         </view>
+  </view>  
+    
+   </picker>
+   
+   <view class="oldwater">
+       <view class="room_id" >
+            <view class="roomiconbox">
+                <view class="iconfont icon-shuifei1 roomicon shangyueshuifei"></view>
+            </view>
+            
+            <view class="main_roombar">
+              
+                 <input type="text" name="old_water" placeholder="请输入上月用水" bindinput="old_waterinput" value="{{lastlist[0].new_water}}"></input>  
+              
+                   
+               
+            </view>
+         </view>
+  </view>  
+  
+  <view class="newwater">
+       <view class="room_id" >
+            <view class="roomiconbox">
+                <view class="iconfont icon-shuifei1 roomicon benyueshuifei"></view>
+            </view>
+            
+            <view class="main_roombar">
+              <input type="text" name="new_water" placeholder="请输入本月用水" bindinput="new_waterinput"></input>    
+               
+            </view>
+         </view>
+  </view> 
+                
+   <view wx:for="{{waterlist}}" wx:key='id'>
+     <input type="text" class="waterprice" name="waterprice" placeholder="请输入水费单价" value="{{item.waterprice}}"></input>
+   </view>
+  
+   <input type="text" name="allwaterprice" class="allwaterprice" placeholder="请输入水费" value="{{allwaterprice}}"></input>
+   
+   <view class="oldelect">
+       <view class="room_id" >
+            <view class="roomiconbox">
+                <view class="iconfont icon-dianfeijiaona roomicon shangyueyongdian"></view>
+            </view>
+            
+            <view class="main_roombar">
+              <input type="text" name="old_electricity" placeholder="请输入上月用电" bindinput="old_electricityinput" value="{{lastlist[0].new_electricity}}"></input>
+               
+            </view>
+         </view>
+  </view> 
+
+  <view class="newelect">
+       <view class="room_id" >
+            <view class="roomiconbox">
+                <view class="iconfont icon-dianfeijiaona roomicon"></view>
+            </view>
+            
+            <view class="main_roombar">
+              <input type="text" name="new_electricity" placeholder="请输入本月用电" bindinput="new_electricityinput"></input>
+               
+            </view>
+         </view>
+  </view> 
+  
+  
+
+   <view wx:for="{{electlist}}" wx:key='id'>
+    <input type="text" class="electprice" name="electprice" placeholder="请输入电费单价" bindinput="electpriceinput" value="{{item.electprice}}"></input>
+   </view>
+   
+   <input type="text" name="allelectprice" class="allelectprice" placeholder="请输入电费" value="{{allelectprice}}"></input>
+
+   <view class="roommoney">
+       <view class="room_id" >
+            <view class="roomiconbox">
+                <view class="iconfont icon-zhufangzujin roomicon"></view>
+            </view>
+            
+            <view class="main_roombar">
+              <input type="text" name="room_money" placeholder="请输入房租" bindinput="room_moneyinput"></input>
+               
+            </view>
+         </view>
+  </view> 
+   
+   <input type="text" name="all_money" class="all_money" placeholder="请输入总金额"      value="{{all_money}}"></input>
+   <input type="text" name="year" class="year" placeholder="请输入年份" bindinput="yearinput" value="{{year}}"></input>
+
+   <input type="text" name="month" class="month" placeholder="请输入月份" bindinput="monthinput"   value="{{month}}"></input>
+   
+   <input type="text" name="payment" class="payment" placeholder="zhangdan"   value="{{payment}}"></input>
+  
+  
+   <view class="tjbtnbox" bindtap="btnsub">
+      <view class="iconfont icon-querentijiaotijiao"></view>
+   </view>
+   
+     </view>
+    
+  </view>
+  
+</view>
+   
+ 
+  
+ 
+

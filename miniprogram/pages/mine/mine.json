@@ -1,0 +1,11 @@
+
+{
+  "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#9AECDB",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "个人中心",
+    
+    "backgroundColor": "#fff",
+    "pageOrientation": "portrait"
+    
+}
