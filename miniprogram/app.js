@@ -4,7 +4,12 @@ var app = getApp()
 App({
   globalData :{
     waterprice:'',
-    openid:''
+    openid:'',
+    aroom:'',
+    awater:'',
+    aelect:'',
+    echartData:[]
+  
     },
   onLaunch: function () {
     if (!wx.cloud) {

@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "ec-canvas":"../../ec-canvas/ec-canvas"
+  },
+  "navigationBarBackgroundColor": "#519bf0",
+  "navigationBarTitleText": "月度分析",
+  "navigationBarTextStyle": "white"
+
+  
+}

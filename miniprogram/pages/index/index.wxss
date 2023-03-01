@@ -88,10 +88,10 @@
   color: #fff;
 }
 
-.icon-yishoukuan{
+.icon-006-pie-chart{
   color: #fff;
 }
-.yishoukuan{
+.piechart{
   color: #fff;
 }
 .icon-weishoukuan{
@@ -130,7 +130,7 @@
    justify-content: center;
    border-radius: 40rpx;
 }
-.icon-yishoukuan{
+.icon-006-pie-chart{
   font-size: 70rpx;
 }
 .wei{

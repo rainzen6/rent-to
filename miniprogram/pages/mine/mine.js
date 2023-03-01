@@ -51,6 +51,11 @@ Page({
     })
 
   },
+  block(){
+    wx.navigateTo({
+      url: '../block/block',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

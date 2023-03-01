@@ -11,7 +11,10 @@
     "pages/rentorandroom/rentorandroom",
     "pages/yishoukuan/yishoukuan",
     "pages/weishoukuan/weishoukuan",
-    "pages/sendmessage/sendmessage"
+    "pages/sendmessage/sendmessage",
+    "pages/ec-canvas",
+    "pages/charts/charts",
+    "pages/block/block"
   ],
   "window": {
     "backgroundTextStyle": "dark",

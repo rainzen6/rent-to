@@ -109,7 +109,7 @@
            <view class="title">添加</view>
         </view>
     <view class="select_name_room_tj">
-         <view class="rentorname" bindtap="dianji">
+         <view class="rentorname" >
             <view class="rentoriconbox">
                 <view class="iconfont icon-zukeliebiao rentoricon"></view>
             </view>

@@ -42,7 +42,7 @@
   },
   "appid": "wxfbe400cd86216727",
   "projectname": "Rent",
-  "libVersion": "2.24.0",
+  "libVersion": "2.24.3",
   "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
   "condition": {
     "search": {

@@ -20,7 +20,7 @@ wx.navigateTo({
   },
   getyishoukuan:function(){
     wx.navigateTo({
-      url: '../yishoukuan/yishoukuan',
+      url: '../charts/charts',
     })
       },
 

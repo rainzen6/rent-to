@@ -34,7 +34,7 @@ Page({
           
         })
   },
-
+//查询租客
   refresh:function(){
     db.collection("rentor").where({
       _openid:app.globalData.openid,
@@ -176,6 +176,7 @@ Page({
     this.setData({
       showaddmodal:true
     })
+    this.getnewlist()
   },
 
   //添加租客和房间号
@@ -200,7 +201,7 @@ Page({
       showaddmodal:true
     })
     
-    
+    this.getnewlist()
   },
 
   //进入修改页面

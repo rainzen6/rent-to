@@ -32,8 +32,8 @@
      <view class="bar3"></view>
      <view class="zhangdan">
        <view class="yi" bindtap="getyishoukuan">
-          <view class="iconfont icon-yishoukuan"></view>
-          <view class="yishoukuan">已收款账单</view>
+          <view class="iconfont icon-006-pie-chart"></view>
+          <view class="piechart">图表分析</view>
        </view>
        <view class="wei" bindtap="getweishoukuan">
           <view class="iconfont icon-weishoukuan"></view>

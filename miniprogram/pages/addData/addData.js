@@ -19,6 +19,7 @@ Page({
     "room_money":"",
     "all_money":"",
     "date":"",
+    electlist:[],
     waterlist:[],
     rentorlist:[],
     index:'',
@@ -298,23 +299,68 @@ Page({
   //计算
   jisuan:function(){
 
-    this.gettotal()
-    var totalnum = this.data.totalnum
-    console.log('获取到的tatalnum',totalnum)
-    var lastlistlength = this.data.lastlist.length
-    console.log('上月记录的长度',lastlistlength)
-    if(lastlistlength==0){
-     console.log(this.data.new_water)
-     var allwp=(this.data.new_water-this.data.old_water)*this.data.waterlist[0].waterprice;
-     var allep=(this.data.new_electricity-this.data.old_electricity)*this.data.electlist[0].electprice;
-
-    }else if(lastlistlength==1){
-      console.log(this.data.lastlist[0].new_water)
-    var allwp=(this.data.new_water-this.data.lastlist[0].new_water)*this.data.waterlist[0].waterprice;
-    var allep=(this.data.new_electricity-this.data.lastlist[0].new_electricity)*this.data.electlist[0].electprice;
-     
-    }
+    this.gettotal() 
+    var totalnum = this.data.totalnum 
+    console.log('获取到的tatalnum',totalnum) 
+    var lastlistlength = this.data.lastlist.length 
+    console.log('上月记录的长度',lastlistlength) 
     
+    //上月无记录
+    if(lastlistlength==0){ 
+     console.log('上月无记录') 
+     
+     if(this.data.old_electricity>this.data.new_electricity && this.data.new_electricity>=10000){
+     //当上月电费>本月电费 且 本月电费>=10000时
+     var new_electricity = parseInt(this.data.new_electricity)
+      var allep=[(10000-this.data.old_electricity)+(new_electricity-10000)]*this.data.electlist[0].electprice;
+      
+      console.log('用电量1',allep)
+
+     }
+
+     if(this.data.old_electricity>this.data.new_electricity && this.data.new_electricity<10000){
+       //当上月电费>本月电费时 且本月电费<10000时
+      var new_electricity = parseInt(this.data.new_electricity)
+      var allep=[(10000-this.data.old_electricity)+new_electricity]*this.data.electlist[0].electprice;
+      console.log('用电量2',allep)
+
+     }
+     
+     if(this.data.old_electricity<=this.data.new_electricity){
+      var allep=(this.data.new_electricity-this.data.old_electricity)*this.data.electlist[0].electprice; 
+     }
+     var allwp=(this.data.new_water-this.data.old_water)*this.data.waterlist[0].waterprice; 
+      
+ 
+    }else if(lastlistlength==1){ //上月有记录
+      
+       console.log('上月电费的类型',typeof(this.data.lastlist[0].new_electricity))
+       console.log('本月电费的类型',typeof(this.data.new_electricity))
+       var lastlist_new_electricity = parseInt(this.data.lastlist[0].new_electricity)
+       var new_electricity = parseInt(this.data.new_electricity)
+      if(lastlist_new_electricity>new_electricity && lastlist_new_electricity<10000){
+        //当上月电费>本月电费 且 上月电费<10000时
+        
+        var allep=[(10000-lastlist_new_electricity)+new_electricity]*this.data.electlist[0].electprice;
+        console.log('用电量3',allep)
+        }
+
+      if(lastlist_new_electricity>new_electricity && lastlist_new_electricity>=10000){
+          //当上月电费>本月电费 且 上月电费>=10000时
+          
+          var allep=[new_electricity-(lastlist_new_electricity-10000)]*this.data.electlist[0].electprice;
+          console.log('用电量4',allep)
+        }
+
+      if(lastlist_new_electricity <= new_electricity){
+        //当上月电费<=本月电费时(正常情况)
+        var new_electricity = parseInt(this.data.new_electricity)
+        var allep=(new_electricity-lastlist_new_electricity)*this.data.electlist[0].electprice;
+        console.log('用电量5',allep)
+        }
+    var allwp=(this.data.new_water-this.data.lastlist[0].new_water)*this.data.waterlist[0].waterprice; 
+     
+  }  
     console.log('固定水',this.data.waterlist[0].waterprice)
     console.log('计算后的水费',allwp)
     this.data.room_money=parseInt(this.data.room_money);
@@ -336,8 +382,8 @@ Page({
 
     var lastlistlength = this.data.lastlist.length
     this.gettotal();
-    var totalnum = this.data.totalnum
-    console.log(totalnum)
+    
+    console.log(lastlistlength)
     this.jisuan();
     
    

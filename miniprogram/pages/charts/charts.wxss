@@ -1,0 +1,312 @@
+page{
+  height: 100%;
+
+}
+.all{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: rgb(255,255,255);
+background-image: url("data:image/svg+xml,%3Csvg id='visual' viewBox='0 0 450 900' width='450' height='900' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'%3E%3Crect x='0' y='0' width='450' height='900' fill='%238cbde3'%3E%3C/rect%3E%3Cpath d='M0 525L10.7 534.8C21.3 544.7 42.7 564.3 64.2 570.2C85.7 576 107.3 568 128.8 572.8C150.3 577.7 171.7 595.3 193 608.7C214.3 622 235.7 631 257 624.8C278.3 618.7 299.7 597.3 321.2 595.8C342.7 594.3 364.3 612.7 385.8 622C407.3 631.3 428.7 631.7 439.3 631.8L450 632L450 901L439.3 901C428.7 901 407.3 901 385.8 901C364.3 901 342.7 901 321.2 901C299.7 901 278.3 901 257 901C235.7 901 214.3 901 193 901C171.7 901 150.3 901 128.8 901C107.3 901 85.7 901 64.2 901C42.7 901 21.3 901 10.7 901L0 901Z' fill='%237ca4da'%3E%3C/path%3E%3Cpath d='M0 691L10.7 683.2C21.3 675.3 42.7 659.7 64.2 658C85.7 656.3 107.3 668.7 128.8 670C150.3 671.3 171.7 661.7 193 658.2C214.3 654.7 235.7 657.3 257 659.7C278.3 662 299.7 664 321.2 655.8C342.7 647.7 364.3 629.3 385.8 629.3C407.3 629.3 428.7 647.7 439.3 656.8L450 666L450 901L439.3 901C428.7 901 407.3 901 385.8 901C364.3 901 342.7 901 321.2 901C299.7 901 278.3 901 257 901C235.7 901 214.3 901 193 901C171.7 901 150.3 901 128.8 901C107.3 901 85.7 901 64.2 901C42.7 901 21.3 901 10.7 901L0 901Z' fill='%235e8ad3'%3E%3C/path%3E%3Cpath d='M0 686L10.7 698C21.3 710 42.7 734 64.2 731.2C85.7 728.3 107.3 698.7 128.8 684.7C150.3 670.7 171.7 672.3 193 681.3C214.3 690.3 235.7 706.7 257 721.8C278.3 737 299.7 751 321.2 752.2C342.7 753.3 364.3 741.7 385.8 731.3C407.3 721 428.7 712 439.3 707.5L450 703L450 901L439.3 901C428.7 901 407.3 901 385.8 901C364.3 901 342.7 901 321.2 901C299.7 901 278.3 901 257 901C235.7 901 214.3 901 193 901C171.7 901 150.3 901 128.8 901C107.3 901 85.7 901 64.2 901C42.7 901 21.3 901 10.7 901L0 901Z' fill='%23466fca'%3E%3C/path%3E%3Cpath d='M0 727L10.7 735C21.3 743 42.7 759 64.2 759.5C85.7 760 107.3 745 128.8 737.3C150.3 729.7 171.7 729.3 193 740C214.3 750.7 235.7 772.3 257 785.7C278.3 799 299.7 804 321.2 804.5C342.7 805 364.3 801 385.8 788.5C407.3 776 428.7 755 439.3 744.5L450 734L450 901L439.3 901C428.7 901 407.3 901 385.8 901C364.3 901 342.7 901 321.2 901C299.7 901 278.3 901 257 901C235.7 901 214.3 901 193 901C171.7 901 150.3 901 128.8 901C107.3 901 85.7 901 64.2 901C42.7 901 21.3 901 10.7 901L0 901Z' fill='%233853be'%3E%3C/path%3E%3Cpath d='M0 794L10.7 800C21.3 806 42.7 818 64.2 826.2C85.7 834.3 107.3 838.7 128.8 831.7C150.3 824.7 171.7 806.3 193 798.5C214.3 790.7 235.7 793.3 257 794.2C278.3 795 299.7 794 321.2 796.8C342.7 799.7 364.3 806.3 385.8 807.7C407.3 809 428.7 805 439.3 803L450 801L450 901L439.3 901C428.7 901 407.3 901 385.8 901C364.3 901 342.7 901 321.2 901C299.7 901 278.3 901 257 901C235.7 901 214.3 901 193 901C171.7 901 150.3 901 128.8 901C107.3 901 85.7 901 64.2 901C42.7 901 21.3 901 10.7 901L0 901Z' fill='%233633ad'%3E%3C/path%3E%3C/svg%3E");
+background-image: url("data:image/svg+xml,%3Csvg id='visual' viewBox='0 0 675 900' width='675' height='900' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'%3E%3Crect x='0' y='0' width='675' height='900' fill='%23c9e3f9'%3E%3C/rect%3E%3Cpath d='M0 482L12.5 495.2C25 508.3 50 534.7 75 535C100 535.3 125 509.7 150 495.5C175 481.3 200 478.7 225 501.8C250 525 275 574 300 587.8C325 601.7 350 580.3 375 565.2C400 550 425 541 450 547.3C475 553.7 500 575.3 525 580.7C550 586 575 575 600 574.8C625 574.7 650 585.3 662.5 590.7L675 596L675 901L662.5 901C650 901 625 901 600 901C575 901 550 901 525 901C500 901 475 901 450 901C425 901 400 901 375 901C350 901 325 901 300 901C275 901 250 901 225 901C200 901 175 901 150 901C125 901 100 901 75 901C50 901 25 901 12.5 901L0 901Z' fill='%23b9d8f3'%3E%3C/path%3E%3Cpath d='M0 658L12.5 662.5C25 667 50 676 75 669.3C100 662.7 125 640.3 150 626.5C175 612.7 200 607.3 225 619.7C250 632 275 662 300 657.3C325 652.7 350 613.3 375 604.2C400 595 425 616 450 633.7C475 651.3 500 665.7 525 670.7C550 675.7 575 671.3 600 660.2C625 649 650 631 662.5 622L675 613L675 901L662.5 901C650 901 625 901 600 901C575 901 550 901 525 901C500 901 475 901 450 901C425 901 400 901 375 901C350 901 325 901 300 901C275 901 250 901 225 901C200 901 175 901 150 901C125 901 100 901 75 901C50 901 25 901 12.5 901L0 901Z' fill='%238bbbe7'%3E%3C/path%3E%3Cpath d='M0 685L12.5 684C25 683 50 681 75 690.5C100 700 125 721 150 733.2C175 745.3 200 748.7 225 738.7C250 728.7 275 705.3 300 701.8C325 698.3 350 714.7 375 715.3C400 716 425 701 450 701.8C475 702.7 500 719.3 525 719.5C550 719.7 575 703.3 600 700.5C625 697.7 650 708.3 662.5 713.7L675 719L675 901L662.5 901C650 901 625 901 600 901C575 901 550 901 525 901C500 901 475 901 450 901C425 901 400 901 375 901C350 901 325 901 300 901C275 901 250 901 225 901C200 901 175 901 150 901C125 901 100 901 75 901C50 901 25 901 12.5 901L0 901Z' fill='%235b9edb'%3E%3C/path%3E%3Cpath d='M0 823L12.5 810.8C25 798.7 50 774.3 75 770.5C100 766.7 125 783.3 150 788.5C175 793.7 200 787.3 225 785.7C250 784 275 787 300 793.2C325 799.3 350 808.7 375 809.7C400 810.7 425 803.3 450 798.2C475 793 500 790 525 789C550 788 575 789 600 790.7C625 792.3 650 794.7 662.5 795.8L675 797L675 901L662.5 901C650 901 625 901 600 901C575 901 550 901 525 901C500 901 475 901 450 901C425 901 400 901 375 901C350 901 325 901 300 901C275 901 250 901 225 901C200 901 175 901 150 901C125 901 100 901 75 901C50 901 25 901 12.5 901L0 901Z' fill='%231481cf'%3E%3C/path%3E%3C/svg%3E");
+
+}
+.allmoneybox{
+  display: flex;
+  width: 100%;
+  height: 300rpx;
+  background-color: #519bf0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 100rpx 100rpx;
+}
+.allmoney{
+  display: flex;
+  width: 85%;
+  height: 80%;
+  background: rgba(255,255,255,.3);
+  border-radius: 30rpx;
+  margin: auto ;
+  margin-top: 90rpx;
+  border:3rpx solid rgba(255,255,255,.3);
+  border:9rpx solid linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(42,156,219,1) 100%);
+  
+  box-shadow: 5rpx 5rpx 20rpx 5rpx rgba(0,0,0,.3);
+  backdrop-filter: blur(5rpx);
+
+  align-items: center;
+  justify-content: space-around;
+}
+
+.leftbox{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+.title{
+  font-size: 30rpx;
+  color: #fff;
+}
+.allmoneybar{
+  font-size: 60rpx;
+  color: #fff;
+}
+.rightbox{
+  display: flex;
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  
+}
+.icon-chaqianbao{
+  font-size: 200rpx;
+  color:#fff;
+  opacity: 0.3;
+  height: 700rpx;
+  width: 300rpx;
+  transform: rotate(10deg);
+  overflow: hidden;
+ 
+ position: relative;
+ left: 50rpx;
+ top: 10rpx;
+}
+.pickerbox{
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+  
+  width: 50%;
+  height: 95rpx;
+  
+}
+.selectroom{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.datebar{
+   color: #fff;
+  
+   font-size: 26rpx;
+   width: 170rpx;
+}
+
+.icon-shijianriqi{
+  color: #ffffff;
+  margin: 10rpx;
+  font-size: 40rpx;
+}
+.containers{
+  display: flex;
+  height: 650rpx;
+  width: 100%;
+  
+}
+.my-chart{
+  width: 750rpx;
+  height: 500rpx;
+}
+
+.piecharttab{
+  display: flex;
+  width: 85%;
+  height: 85%;
+  background: rgba(255,255,255,.3);
+  border-radius: 30rpx;
+  margin: auto ;
+  margin-top: 70rpx;
+  border: 3rpx solid rgba(255,255,255,.3);
+  box-shadow: 5rpx 5rpx 20rpx 5rpx rgba(0,0,0,.3);
+  backdrop-filter: blur(5rpx);
+ 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.bar{
+  width:auto;
+  height: 70rpx;
+}
+ec-canvas{
+  width: 100%;
+  height: 100%;
+}
+
+.moneybar{
+  
+  display: flex;
+  flex: 1 1 auto;
+  width: 100%;
+ 
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.electbox{
+  display: flex;
+  width: 28%;
+  background: #ffd8be;
+  
+  border-radius: 30rpx;
+  border: 5rpx solid rgb(231, 195, 127);
+  box-shadow: 5rpx 5rpx 20rpx 5rpx rgba(0,0,0,.3);
+  backdrop-filter: blur(30rpx);
+  
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.electtabbox{
+  display: flex;
+  flex-direction: column;
+  margin: 30rpx;
+  align-items: center;
+  justify-content: center;
+  
+}
+.icon-shandian{
+  font-size: 70rpx;
+  color: rgba(252,161,71,1);
+}
+.electdata{
+  font-size: 50rpx;
+  color: #fff;
+}
+.electtab{
+  
+  color: rgba(252,161,71,1);
+  height: 100%;
+}
+.electdatabox{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: 30rpx;
+}
+.electpercent{
+  color: #e7b13d;
+  
+}
+.waterbox{
+
+  display: flex;
+  width: 28%;
+  background: #c7c7ff;
+  
+  border-radius: 30rpx;
+  border: 5rpx solid rgb(132, 183, 231);
+  box-shadow: 5rpx 5rpx 20rpx 5rpx rgba(0,0,0,.3);
+  backdrop-filter: blur(30rpx);
+  
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.watertabbox{
+  display: flex;
+  flex-direction: column;
+  margin: 30rpx;
+  align-items: center;
+  justify-content: center;
+  
+}
+.icon-shuifei2{
+  font-size: 70rpx;
+  color: rgba(149,149,255,1);
+}
+.waterdata{
+  font-size: 50rpx;
+  color: #fff;
+}
+.watertab{
+  
+  color: rgba(149,149,255,1);
+  height: 100%;
+
+}
+.waterdatabox{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: 30rpx;
+ 
+}
+.waterpercent{
+  color: rgba(149,149,255,1);
+  
+}
+.icon-fangzu{
+  color: rgba(66,193,110,1);
+  font-size: 70rpx;
+}
+.roombox{
+
+  display: flex;
+  width: 28%;
+  background: #a9ecbf;
+  
+  border-radius: 30rpx;
+  border: 5rpx solid rgb(116, 236, 166);
+  box-shadow: 5rpx 5rpx 20rpx 5rpx rgba(0,0,0,.3);
+  backdrop-filter: blur(30rpx);
+  
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.roomtabbox{
+  display: flex;
+  flex-direction: column;
+  margin: 30rpx;
+  align-items: center;
+  justify-content: center;
+  
+}
+.roomtab{
+  
+  color: rgba(66,193,110,1);
+  height: 100%;
+
+}
+.roomdatabox{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: 30rpx;
+ 
+}
+.roomdata{
+  font-size: 50rpx;
+  color: #fff;
+}
+.roompercent{
+  color: #63cc7a;
+  
+}
+.containers2{
+  width: 700rpx;
+  height: 500rpx;
+  color: aquamarine;
+}
+.box{
+  width: 100%;
+  height: 600rpx;
+  color: red;
+}

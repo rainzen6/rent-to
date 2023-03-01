@@ -1,6 +1,11 @@
 <view class='container'>
   
+
+
             <view class="Yearbar">
+
+             
+
              <view class="year_choice_bar">
               <picker class="picker" name="year" mode="date"  fields="year" value="{{date}}" start="2015" end="2030" bindchange="bindDateChange">
                 <view class="in_bar">
@@ -65,7 +70,15 @@
           </view>  
           <view class="money">
             <view class=' iconfont icon-renminbi1'>  </view>
-            <view>  {{item.all_money}}元</view>
+            <view>  {{we.toFixed(item.all_money)}}元</view>
+            <wxs module="we">
+            var toFixed = function(value){
+              return value.toFixed(1);
+            }
+            module.exports = {
+              toFixed:toFixed
+            }
+          </wxs>
           </view>  
         </view>
           
@@ -92,4 +105,6 @@
           
     </view>
   </view>
+  
 </view>
+

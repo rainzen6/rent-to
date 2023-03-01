@@ -32,7 +32,7 @@
   </view>
 
 
-  <view wx:if="{{userInfo}}" class="item" bindtap="sendmessagepages">
+  <view wx:if="{{userInfo}}" class="item" bindtap="block">
     <text class="iconfont icon-loudongguanli"></text>
     <text class="text">管理楼栋</text>
 

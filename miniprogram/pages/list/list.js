@@ -8,7 +8,7 @@ Page({
   data: {
     
     title: '加载中...',
-    
+    numbers:[],
     x:0,
     nav_list:[
       {
@@ -75,7 +75,8 @@ Page({
     ],
     month_id:'',
     month:'',
-    listmonth:''
+    listmonth:'',
+    
 
   },
 
@@ -87,8 +88,9 @@ Page({
     this.setData({
       year:e.detail.value
     })
-
+    console.log(year)
     this.getlist()
+    
   },
 
 
@@ -121,11 +123,13 @@ Page({
         })
 
         this.getlist()
-    
+        
     
     },
     
     
+
+
     async getlistFirst(){
       var year = this.data.year
       console.log('账单查询获取到的年',year)
@@ -155,10 +159,13 @@ Page({
           all = all.concat(list.data)
         }
         console.log('返回的结果',all)
+        
         this.setData({
           list:all
           
+          
         })
+
   
     },
 
@@ -190,12 +197,22 @@ Page({
         all = all.concat(list.data)
       }
       console.log('返回的结果',all)
+      console.log('长度',all.length)
+     //计算每月的总金额
+     var i = 0;
+     var amoney = 0;
+     for(i=0;i<all.length;i++){
+       amoney = amoney + all[i].all_money
+     }
+     console.log('计算后的每月总金额',amoney)
       this.setData({
-        list:all
-        
+        list:all,
+        amoney
       })
 
   },
+
+  
   godetail(e){
     console.log('点击了跳转商品详情',e.currentTarget.dataset.id)
     wx.navigateTo({
@@ -279,7 +296,7 @@ Page({
       var date =new Date();
       var Year = date.getFullYear();
       var nowmonth = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1);
-      var nowmonth = nowmonth.substring(1,2)
+      
       var year =  String(Year)
       console.log("当前年月",year,nowmonth)
       console.log(typeof(year))
@@ -300,7 +317,7 @@ Page({
         })
     }
     
-      
+   
   },
 
   /**

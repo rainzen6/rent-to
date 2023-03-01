@@ -26,13 +26,11 @@
             
             <view class="main_roombar">
                <view>{{rentorlist[index].room_id}}</view>
-                
             </view>
          </view>
         
      </view>
-     
-     
+       
   </view>
   </picker>
   
