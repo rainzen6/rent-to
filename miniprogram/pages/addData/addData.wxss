@@ -13,7 +13,7 @@
 }
 .listbg{
   display: flex;
-  width: 90%;
+  width: 95%;
   height: 95%;
   background: rgba(255,255,255,.3);
   border-radius: 30rpx;
@@ -28,181 +28,279 @@
 .list{
   display: flex;
   flex-direction: column;
-  width: 100%;
-  align-items: center;
-  
-}
-.titlebox{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  width: 100%;
-  height: 100rpx;
-}
-.title{
-  
-  font-size: 50rpx;
-  color: rgba(0, 0, 0,.5);
-  text-shadow: 1rpx 1rpx 3rpx rgba(255,255,255,.7);
-}
-.functional{
-  display: flex;
   align-items: center;
   width: 100%;
-}
-.rentorname{
   
-  width: 80%;
-  display: flex;
-  border-radius: 20rpx;
-  border: 4rpx solid rgb(39, 38, 38);
-   align-items: center;
-   
-}
-
-.rentoricon{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-   font-size: 50rpx;
-   width: 80rpx;
-   height: 80rpx;
-   color: rgb(238, 107, 56);
-}
-.main_namebar{
-  
-  width: 400rpx;
-  font-size: 40rpx;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-left: 4rpx solid #000;
-}
-
-
-.room_id{
-  
-  width: 80%;
-  display: flex;
-  border-radius: 20rpx;
-  border: 4rpx solid rgb(39, 38, 38);
-   align-items: center;
-   
-}
-
-.roomicon{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-   font-size: 50rpx;
-   width: 80rpx;
-   height: 80rpx;
-  color: rgb(238, 159, 41);
-}
-.main_roombar{
-  
-  width: 400rpx;
-  font-size: 40rpx;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-left: 4rpx solid #000;
 }
 .select_name_room{
-  display: flex;
-  flex-direction: column;
   
-  width: 100%;
-  height: 200rpx;
+  display: flex;
+  width: 700rpx;
+  height: 150rpx;
+  flex-direction: row;
+  margin-top: 20rpx;
   align-items: center;
   justify-content: space-around;
+}
+
+
+.rentorname{
+  
+  width: 300rpx;
+  height: 150rpx;
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+   
+}
+.rentorname_input{
+  font-size: 40rpx;
+}
+.room_id{
+  
+  width: 300rpx;
+  height: 150rpx;
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+   
+}
+.room_id_input{
+  font-size: 40rpx;
+}
+.rentorname_icon{
+  display: flex;
+  align-items: center;
+   font-size: 50rpx;
+   width: 100%;
+   height: 80rpx;
+   font-weight: 550;
+  color: rgb(153, 153, 153);
+}
+
+.room_id_icon{
+  display: flex;
+  align-items: center;
+   font-size: 50rpx;
+   width: 100%;
+   height: 80rpx;
+   font-weight: 550;
+  color: rgb(153, 153, 153);
+}
+.select_input{
+  display: flex;
+  width: 300rpx;
+  height: 80rpx;
+  align-items: center;
+  justify-content: center;
+  border: 5rpx solid #000;
+  border-radius: 40rpx;
+}
+.Fixed_charge_date_and_roommoney{
+  display: flex;
+  width: 700rpx;
+  height: 180rpx;
+  flex-direction: row;
+  margin-top: 20rpx;
+  align-items: center;
+  justify-content: space-around;
+  
 }
 .date{
   display: flex;
   flex-direction: column;
-  
-  width: 100%;
-  height: 100rpx;
+  width: 300rpx;
+  height: 150rpx;
   align-items: center;
   justify-content: space-around;
 
 }
+.date_icon{
+  display: flex;
+  align-items: center;
+   font-size: 50rpx;
+   width: 100%;
+   height: 80rpx;
+   font-weight: 550;
+  color: rgb(153, 153, 153);
+}
+.dateinput{
+  font-size: 40rpx;
+}
+.roommoney{
+  display: flex;
+  flex-direction: column;
+  width: 300rpx;
+  height: 150rpx;
+  align-items: center;
+  justify-content: space-around;
+}
+.roommoney_icon{
+  display: flex;
+  align-items: center;
+   font-size: 50rpx;
+   width: 100%;
+   height: 80rpx;
+   font-weight: 550;
+  color: rgb(153, 153, 153);
+}
+.roommoney_input{
 
-.icon-shijianriqi{
-  color: rgb(46, 224, 70);
+  width: 300rpx;
+  height: 80rpx;
+  border: 5rpx solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 40rpx;
+}
+
+.Fixed_charge_water{
+  display: flex;
+  width: 700rpx;
+  height: 180rpx;
+  flex-direction: row;
+  
+  align-items: center;
+  justify-content: space-around;
 }
 .oldwater{
   display: flex;
   flex-direction: column;
-  
-  width: 100%;
-  height: 100rpx;
+  width: 300rpx;
+  height: 150rpx;
   align-items: center;
   justify-content: space-around;
+}
+.oldwater_icon{
+  display: flex;
+  align-items: center;
+   font-size: 50rpx;
+   width: 100%;
+   height: 80rpx;
+   font-weight: 550;
+  color: rgb(153, 153, 153);
+}
+.oldwater_input{
+
+  width: 300rpx;
+  height: 80rpx;
+  border: 5rpx solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 40rpx;
 }
 .newwater{
   display: flex;
   flex-direction: column;
-  
-  width: 100%;
-  height: 100rpx;
+  width: 300rpx;
+  height: 150rpx;
+  align-items: center;
+  justify-content: space-around;
+}
+.newwater_icon{
+  display: flex;
+  align-items: center;
+   font-size: 50rpx;
+   width: 100%;
+   height: 80rpx;
+   font-weight: 550;
+  color: rgb(153, 153, 153);
+}
+.newwater_input{
+
+  width: 300rpx;
+  height: 80rpx;
+  border: 5rpx solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 40rpx;
+}
+.Fixed_charge_electricity{
+  display: flex;
+  width: 700rpx;
+  height: 180rpx;
+  flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
 .oldelect{
   display: flex;
   flex-direction: column;
-  
-  width: 100%;
-  height: 100rpx;
+  width: 300rpx;
+  height: 150rpx;
   align-items: center;
   justify-content: space-around;
+}
+.oldelect_icon{
+  display: flex;
+  align-items: center;
+   font-size: 50rpx;
+   width: 100%;
+   height: 80rpx;
+   font-weight: 550;
+  color: rgb(153, 153, 153);
+}
+.oldelect_input{
+
+  width: 300rpx;
+  height: 80rpx;
+  border: 5rpx solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 40rpx;
 }
 .newelect{
   display: flex;
   flex-direction: column;
-  
-  width: 100%;
-  height: 100rpx;
+  width: 300rpx;
+  height: 150rpx;
   align-items: center;
   justify-content: space-around;
+  border: 50rpx;
 }
-.roommoney{
+.newelect_icon{
   display: flex;
-  flex-direction: column;
-  
-  width: 100%;
-  height: 100rpx;
+  align-items: center;
+   font-size: 50rpx;
+   width: 100%;
+   height: 80rpx;
+   font-weight: 550;
+  color: rgb(153, 153, 153);
+}
+.newelect_input{
+
+  width: 300rpx;
+  height: 80rpx;
+  border: 5rpx solid #000;
+  display: flex;
   align-items: center;
   justify-content: space-around;
+  border-radius: 40rpx;
 }
-.shangyueshuifei{
-  color: rgb(34, 202, 224);
-}
-.benyueshuifei{
-  color: rgb(35, 120, 231);
-}
-.shangyueyongdian{
-  color: rgb(204, 206, 102);
-}
-.icon-zhufangzujin{
-  color: rgb(22, 155, 22);
-}
+
 .tjbtnbox{
   
-  position: relative;
-  top: 100rpx;
-  width: 60%;
-  height: 100rpx;
-  border: 4rpx solid #000;
+  position: fixed;
+  right: 50rpx;
+  bottom: 20rpx;
+  width: 260rpx;
+  height: 80rpx;
+  
   border-radius: 20rpx;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgb(225,235,92);
+background: linear-gradient(218deg, rgba(225,235,92,1) 0%, rgba(170,204,24,1) 42%, rgba(0,255,247,1) 100%);
 }
 .icon-querentijiaotijiao{
-  font-size: 60rpx;
+  font-size: 30rpx;
+  font-weight: 550;
+  color: #fff;
 }
 .allwaterprice{
   display: none;
@@ -235,4 +333,80 @@
 .payment{
   display: none;
   visibility: hidden;
+}
+.icon-tianjia{
+  font-weight: 550;
+  color: #fff;
+}
+.add_expence_picker{
+  position: fixed;
+  left: 50rpx;
+  bottom: 20rpx;
+  width: 260rpx;
+  height: 80rpx;
+  border-radius: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(103,92,235);
+background: linear-gradient(218deg, rgba(103,92,235,1) 0%, rgba(24,128,204,1) 42%, rgba(3,251,227,1) 100%);
+}
+.other_expence{
+  display: flex;
+  
+  flex-wrap: wrap;
+  width: 700rpx;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.other_expence_bar{
+  width: 300rpx;
+  height: 120rpx;
+  margin: 10rpx;
+}
+.other_expence_title{
+  display: flex;
+  align-items: center;
+   font-size: 30rpx;
+   width: 100%;
+   height: 60rpx;
+   font-weight: 550;
+  color: rgb(153, 153, 153);
+  align-items: center;
+  justify-content: space-between;
+}
+.icon-shanchu-01{
+  font-size: 50rpx;
+}
+.noinput{
+  width: 300rpx;
+  height: 60rpx;
+  border: 5rpx solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 40rpx;
+}
+.input{
+
+  width: 300rpx;
+  height: 60rpx;
+  border: 5rpx solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 40rpx;
+}
+.icon-shanchu-01{
+  color: rgb(233, 105, 105);
+}
+.notitle{
+  color: #000;
+}
+.title{
+  color:rgb(115, 167, 235) ;
+}
+.rentornamecolor{
+  color: rgb(231, 130, 130);
 }

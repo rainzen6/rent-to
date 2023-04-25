@@ -1,67 +1,141 @@
 <view class="bg">
   <view class="tabbox">
 
-    <view class="addBlocks"> 
+    <view class="Blocks"> 
       <view class="addBlocksBox">
          <view class="iconfont icon-tianjialoudong" bindtap="addBlocksModal"></view>
       </view>
+
+      <view class="deleteBlocksBox">
+        <view class="iconfont icon-jinyongcangku" bindtap="deleteBlocks"></view>
+      </view>
     </view>
+
+    
 
    
     
     <view class="selectbox">
       <picker class="picker" mode="selector" name="block_name" value="{{blocklist[index].value}}"  bindchange="bindblocknameChange" range-key="{{'block_name'}}"
       range="{{blocklist}}" >
-        <view class="blockname">
+       <view class="blocknamebox">
+         <view class="blockname">
           {{blocklist[index].block_name}}
         </view>
+       </view>
+        
       </picker>
     </view>
 
     <view class="addroom">
       <view class="iconfont icon-tianjiahuhao" bindtap="addRoomModal"></view>
+      
+    </view>
+    
+
+  </view>
+
+  <view class="house_listbox">
+    <view class="house_list" wx:for="{{roomlist}}" wx:key='id'   >
+     
+     <view class='item' data-id="{{item._id}}" bindtap="showalterModal">
+       
+       <view wx:if="{{item.hasrentor==true}}"  class="iconfont icon-fangwu" data-id="{{item._id}}" ></view>
+       <view wx:if="{{item.hasrentor==false}}"  class="iconfont icon-a-shouyezhuyefangzi"
+        data-id="{{item._id}}" ></view>
+       <view class="roomid">{{item.room_id}}</view>
+       <view wx:if="{{item.hasrentor==true}}"  class="name" >{{item.rentorname}}</view>
+         
+     </view>
+
+
+
+     <view class="Modalbox"  hidden="{{showalterModal}}">
+        <view>修改房间状态</view>
+        <switch checked="{{switchCheck}}" bindchange="switchChange" type="switch"/>
+
+        <view class="fixbtn" >
+          <view class="cancel_rentorbtn" bindtap="cancelalterModal">
+            <view class="iconfont icon-quxiao"></view>
+            <view class="canceltitle">关闭</view>
+          </view>
+        
+          <view class="deletebtn" bindtap="delete_room_rentor"> 
+            <view class="iconfont icon-delete-person" ></view>
+            <view class="deletetitle">删除</view>
+          </view>
+        </view>
+        
+        
+     </view>
+     
+    
+    </view>
+  </view>
+  
+
+</view>
+
+<view class="add_blockModalBox"  hidden="{{showaddmodal}}">
+  <view class="blocktitle iconfont icon-tianjialoudong">添加楼栋</view>
+  <view class="blockmain_inputbox">
+    <view class="blockinputtitle">楼栋名</view>
+    <view class="blockinput_field">
+      <input  type="text" name="block_name"  bindinput="block_nameinput"></input>
+    </view>
+    
+  </view>
+  <view class="blockbtn">
+    <view class="cancel_blockbtn " bindtap="canceladd_block">
+      <view class="iconfont icon-quxiao"></view>
+      <view class="canceltitle">关闭</view>
+    </view>
+    
+    <view class="confirm_blockbtn " bindtap="confirmadd_block">
+      <view class="iconfont icon-cangkuqueren"></view>
+      <view class="confirmtitle">添加</view>
     </view>
 
   </view>
+</view>
 
-  <view class="house_list" wx:for="{{roomlist}}" wx:key='id'>
-     <view class='item' data-id="{{item._id}}">
-       <view class="iconfont icon-fangwu"></view>
-       <view class="roomid">{{item.room_id}}</view>
-       <view class="name">{{item.rentorname}}</view>
-         
-     </view>
+<view class="add_rentorModalbox"  hidden="{{showaddroommodal}}">
+  <view class="rentor_bigtitle iconfont icon-tianjiahuhao">添加该楼栋租客</view>
+
+  <view class="main_inputbox">
+    <view class="rentor_block_title">
+      <view class="rentor_block_name">楼栋名</view>
+      <view class="rentor_blockname_field">{{blocklist[index].block_name}}</view>
+    </view>
     
-  </view>
-
-</view>
-
-<view class="Modalbox"  hidden="{{showaddmodal}}">
-  <view class="title">添加楼栋</view>
-  <view class="main_inputbox">
-    <view class="inputtitle">楼栋名：</view>
-    <input type="text" name="block_name"  bindinput="block_nameinput"></input>
-  </view>
-  <view class="btn">
-    <view class="confirm_blockbtn iconfont icon-cangkuqueren" bindtap="confirmadd_block"></view>
-    <view class="cancel_blockbtn iconfont icon-quxiao" bindtap="canceladd_block"></view>
-  </view>
-</view>
-
-<view class="Modalbox"  hidden="{{showaddroommodal}}">
-  <view class="title">添加该楼栋租客</view>
-  <view class="main_inputbox">
-    <view>楼栋名：{{blocklist[index].block_name}}</view>
     
    <picker mode="selector" name="rentorname" value="{{rentorlist[rentorindex].rentorname}}"  bindchange="bindrentornameChange" range-key="{{'rentorname'}}" range="{{rentorlist}}" >
-    <view class="rentorname">租客名：{{rentorlist[rentorindex].rentorname}}</view>
-    <view class="roomid">房间名：{{rentorlist[rentorindex].room_id}}</view>
+    <view class="rentornamebox">
+      <view class="rentortitle">租客名</view>
+      <view class="rentor_field">{{rentorlist[rentorindex].rentorname}}</view>
+    </view>
+    <view class="roomidbox">
+      <view class="roomidtitle">房间名</view>
+      <view class="roomid_field">{{rentorlist[rentorindex].room_id}}</view>
+    </view>
+    
    </picker>
   </view>
-  <view class="btn">
-    <view class="confirm_rentorbtn iconfont icon-cangkuqueren" bindtap="confirmadd_rentor"></view>
-    <view class="cancel_rentorbtn iconfont icon-quxiao" bindtap="canceladd_rentor"></view>
+
+  <view class="rentorbtn">
+    <view class="cancel_rentorbtn" bindtap="canceladd_rentor">
+      <view class=" iconfont icon-quxiao" ></view>
+      <view class="canceltitle">关闭</view>
+    </view>
+    
+    <view class="confirm_rentorbtn" bindtap="confirmadd_rentor">
+      <view class="iconfont icon-weibiaoti--"></view>
+      <view class="confirmtitle">添加</view>
+    </view>
+    
   </view>
 </view>
+
+
 
 

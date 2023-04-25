@@ -1,2 +1,31 @@
 
-  <button type="primary" bindtap="handlePay">huoqu</button>
+  <button type="primary"  bindtap="jisuan">计算</button>
+  <view class="other_expence">
+    <picker mode="selector" class="exitem_picker iconfont icon-tianjia" bindchange="bindExpenceChange" name="{{Expense_item[index].name}}" value="{{Expense_item[index].Cname}}" range="{{Expense_item}}" range-key="{{'Cname'}}">
+      <view class="picker" >
+      {{Expense_item[index].Cname}}
+      </view>
+    </picker>
+
+    <view class="box" wx:for="{{exitem}}" wx:key='ExpenceChangeindex'>
+      <view class="{{inpclass==0?'title':'notitle'}}" wx:if="{{exitem[index].exid==0}}">管理费</view>
+      <input type="number" class="{{inpclass==0?'input':'noinput'}}" bindfocus="inp_focus" bindblur="inp_blur"  wx:if="{{exitem[index].exid==0}}" name="management_Fee" placeholder="请输入管理费" bindinput="management_Fee_input" 
+      data-id='{{index}}' value="{{management_Fee==0?'':management_Fee}}"></input> 
+      
+      <view class="{{inpclass==1?'title':'notitle'}}" wx:if="{{exitem[index].exid==1}}">网络费</view>
+      <input type="number" class="{{inpclass==1?'input':'noinput'}}" bindfocus="inp_focus" bindblur="inp_blur" data-id="{{index}}" wx:if="{{exitem[index].exid==1}}" name="network_Fee" placeholder="请输入网络费" bindinput="network_Fee_input" 
+      data-id='{{index}}' value="{{network_Fee==0?'':network_Fee}}"></input> 
+
+      <view class="{{inpclass==2?'title':'notitle'}}" wx:if="{{exitem[index].exid==2}}">清洁费</view>
+      <input type="number" class="{{inpclass==2?'input':'noinput'}}" bindfocus="inp_focus" bindblur="inp_blur" data-id="{{index}}" wx:if="{{exitem[index].exid==2}}" name="cleaning_Fee" placeholder="请输入清洁费" bindinput="cleaning_Fee_input" 
+      data-id='{{index}}' value="{{cleaning_Fee==0?'':cleaning_Fee}}"></input> 
+
+      <view class="{{inpclass==3?'title':'notitle'}}" wx:if="{{exitem[index].exid==3}}">天然气费</view>
+      <input type="number"  class="{{inpclass==3?'input':'noinput'}}" bindfocus="inp_focus" bindblur="inp_blur" data-id="{{index}}" wx:if="{{exitem[index].exid==3}}" name="gas_Fee" placeholder="请输入天然气费" bindinput="gas_Fee_input" 
+      data-id='{{index}}' value="{{gas_Fee==0?'':gas_Fee}}"></input> 
+
+      <view  data-id="{{index}}" bindtap="deleteInput">删除</view>
+    </view>
+   
+  </view>
+  

@@ -18,14 +18,14 @@
   ],
   "window": {
     "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#f7f7f2",
+    "navigationBarBackgroundColor": "#fff",
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "Rent To",
     "backgroundColor": "#fff",
     "pageOrientation": "portrait"
   },
   "tabBar": {
-    "backgroundColor": "#f7f7f2",
+    "backgroundColor": "#fff",
     "selectedColor": "#000000",
     "color": "#bfbfbf",
     "list": [

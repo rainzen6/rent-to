@@ -1,0 +1,24 @@
+
+.exitem_picker{
+  background-color: rgb(236, 145, 145);
+  width: 100rpx;
+  height: 100rpx;
+}
+.picker{
+  width: 100rpx;
+  height: 100rpx;
+  
+}
+.noinput{
+  border: 5rpx solid #000;
+}
+.input{
+  border: 4rpx solid rgb(115, 167, 235);
+  border-radius: 10rpx;
+}
+.notitle{
+  color: #000;
+}
+.title{
+  color:rgb(115, 167, 235) ;
+}

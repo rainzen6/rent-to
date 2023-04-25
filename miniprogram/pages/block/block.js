@@ -7,6 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    
     showaddmodal:true,
     "block_name":"",
     blocklist:[],
@@ -14,7 +15,10 @@ Page({
     showaddroommodal:true,
     rentorlist:[],
     rentorindex:'',
-    hasrentor:true
+    roomlist:[],
+    roomcounts:'',
+    switchCheck:'',
+    showalterModal:true
     
   },
 
@@ -31,9 +35,10 @@ Page({
     });
 
   },
-
+//添加提交楼栋
   confirmadd_block:function () {
     let block_name = this.data.block_name
+   
     db.collection("blocks").add({
       data:{
         block_name
@@ -50,6 +55,7 @@ Page({
     })
   },
 
+
   canceladd_block:function(){
 
     this.setData({
@@ -59,6 +65,81 @@ Page({
   },
 
   
+  //删除楼栋
+  deleteBlocks:function () {
+    let block_name = this.data.block_name
+    let roomcounts =  this.data.roomcounts
+    console.log('该楼栋的租客记录数',roomcounts)
+    console.log('楼栋名',block_name);
+    if(!block_name){
+      wx.showToast({
+        title: '没有选择楼栋哦',
+        icon:'error'
+      })
+    }else {
+
+      //当该楼栋的租客数为0时
+    if(roomcounts==0){
+      wx.showModal({
+        title: '提示',
+        content: '是否删除'+ block_name,
+        success (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+            db.collection('blocks').where({
+              _openid:app.globalData.openid,
+              block_name
+            }).remove({
+              success: function(res) {
+                console.log(res.data)
+                wx.showToast({
+                  title: '删除成功',
+                }) 
+              }
+            })
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+          }
+        }
+      })
+     //当该楼栋的租客数大于0时
+    }else{
+      wx.showModal({
+        title: '提示',
+        content: '是否删除' + block_name + '同时可能会删除掉该楼栋下的所有房间信息',
+        success (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+            db.collection('blockandroom').where({
+              _openid:app.globalData.openid,
+              block_name
+            }).remove({
+              success: function(res) {
+                console.log('删除该楼栋的全部租客',res.data)
+                
+              }
+            })
+
+            db.collection('blocks').where({
+              _openid:app.globalData.openid,
+              block_name
+            }).remove({
+              success: function(res) {
+                console.log('删除该楼栋',res.data)
+                wx.showToast({
+                  title: '删除成功',
+                }) 
+              }
+            })
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+          }
+        }
+      })
+      }
+    }
+    
+  },
 //查询楼栋
   async  queryblocks(){
     let count = await  db.collection("blocks").where({
@@ -88,13 +169,24 @@ bindblocknameChange: function(e) {
   this.setData({
     block_name:blocklist[index].block_name
   })
+
+  this.getroomlist()
 },
 //打开添加租客弹出框
 addRoomModal: function () {
-  this.setData({
+  let block_name = this.data.block_name
+  if (block_name) {
+     this.setData({
     showaddroommodal:false
     
   })
+  }else{
+    wx.showToast({
+      title: '没有选择楼栋哦',
+      icon:'error'
+    })
+  }
+ 
 },
 //关闭添加租客弹出框
 canceladd_rentor:function(){
@@ -146,12 +238,20 @@ confirmadd_rentor:function () {
   let rentorname = this.data.rentorname
   let room_id = this.data.room_id
   let hasrentor = this.data.hasrentor
-  db.collection("blockandroom").add({
+  
+  if(!block_name){
+    wx.showToast({
+      title: '没有选择楼栋哦',
+      icon:'error'
+    })
+
+  }else{
+db.collection("blockandroom").add({
     data:{
       block_name,
       rentorname,
       room_id,
-      hasrentor
+      hasrentor:true
     }
   }).then(res=>{
     console.log('房间添加成功',res)
@@ -160,32 +260,179 @@ confirmadd_rentor:function () {
       title: '房间添加成功',
     })
   })
+  }
+  
   this.setData({
     showaddroommodal:true
   })
  },
 
+//获取该楼栋的房间信息
  async getroomlist(){
-
+  let blocklist = this.data.blocklist
+  let index = this.data.index
   let block_name = this.data.block_name
+  console.log('当前楼栋',blocklist[index].block_name);
+  
   let roomcounts = await  db.collection("blockandroom").where({
     _openid:app.globalData.openid,
-    block_name:block_name
+    block_name
   }).count()
 
   roomcounts = roomcounts.total
+  console.log('记录数',roomcounts)
     let roomall = []
     for(let i = 0; i < roomcounts ; i+=20){
-      let roomlist = await db.collection("rentor").skip(i).get()
-      roomall = roomall.concat(roomlist.data)
+      let roomlists = await db.collection("blockandroom").skip(i).where({
+        _openid:app.globalData.openid,
+        block_name
+        
+      }).get()
+      roomall = roomall.concat(roomlists.data)
     }
-    console.log('返回的结果',roomall)
+    console.log('房间返回的结果',roomall)
     this.setData({
-      roomlist:roomall
-      
+      roomlist:roomall,
+      roomcounts
     })
-    console.log(roomlist);
+    
  },
+
+ deleteRoom:function () {
+  let block_name = this.data.block_name
+  let room_id = this.data.room_id
+  let id = e.currentTarget.dataset.id
+  wx.showModal({
+    title: '提示',
+    content: '是否删除'+ block_name+'下的'+room_id,
+    success (res) {
+      if (res.confirm) {
+        console.log('用户点击确定')
+        db.collection('blockandroom').where({
+          _openid:app.globalData.openid,
+          block_name,
+          room_id
+        }).remove({
+          success: function(res) {
+            console.log(res.data)
+            wx.showToast({
+              title: '删除房间成功',
+            }) 
+          }
+        })
+      } else if (res.cancel) {
+        console.log('用户点击取消')
+      }
+    }
+  })
+ },
+//打开修改页面
+ showalterModal: function (e) {
+  //先查找数据库中这个id的hasrentor值，然后赋值给e.detail.value
+  let id = e.currentTarget.dataset.id
+  console.log('open',id);
+  let hasrentor 
+  let room_id
+  db.collection("blockandroom").doc(id).get()
+  .then(res=>{
+    console.log('查找状态成功',res.data.hasrentor)
+    this.setData({
+    showalterModal:false,
+    id,
+    switchCheck:res.data.hasrentor,
+    room_id:res.data.room_id
+    })
+
+    
+    
+  })
+  console.log(hasrentor);
+  
+ 
+},
+
+
+//修改状态
+switchChange:function (e) {
+  
+  //先查找数据库中这个id的hasrentor值，然后赋值给e.detail.value
+  console.log('switch样式',e.detail.value);
+  let id = this.data.id
+  console.log('switch',id);
+
+  let hasrentor 
+  console.log(hasrentor);
+  
+  db.collection("blockandroom").doc(id)
+  .update({
+    data:{
+      hasrentor:e.detail.value
+
+    }
+  })
+  .then(res=>{
+     console.log('修改状态成功',res)
+     
+      wx.showToast({
+        title: '状态修改成功',
+        duration:2000
+  
+        })
+
+    this.getroomlist()
+    
+  })
+  
+  
+
+},
+//关闭修改页面
+cancelalterModal:function(){
+
+  this.setData({
+    showalterModal:true
+  })
+  
+},
+//删除该楼栋下的房间
+delete_room_rentor:function () {
+  let id = this.data.id
+  console.log('delete',id)
+  let room_id = this.data.room_id
+  let block_name = this.data.block_name
+  wx.showModal({
+    title: '提示',
+    content: '是否删除'+ block_name+'下的房间'+room_id,
+    success (res) {
+      if (res.confirm) {
+        console.log('用户点击确定')
+        db.collection('blockandroom').where({
+          _openid:app.globalData.openid,
+          _id:id
+          
+          
+        }).remove({
+          success: function(res) {
+            console.log(res.data)
+            wx.showToast({
+              title: '删除房间成功',
+            })
+
+            
+          }
+          
+        })
+      } else if (res.cancel) {
+        console.log('用户点击取消')
+       
+      }
+    }
+    
+  })
+  this.cancelalterModal()
+  this.getlist()
+  this.getroomlist()
+},
   /**
    * 生命周期函数--监听页面加载
    */

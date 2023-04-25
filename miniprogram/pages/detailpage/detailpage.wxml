@@ -7,7 +7,6 @@
      
      <view class="list">
         
-       
           <view class="nameandroom">
              <view>租客姓名:{{item.rentorname}}  </view>
              <view>  房间号:{{item.room_id}}</view>
@@ -66,6 +65,26 @@
             <view class="fangzu iconfont icon-zhufangzujin">房租</view>
              <view>{{item.room_money}}</view>
           </view>
+          <view class="other_expense" hidden="{{item.other_expense_sum ==0}}">
+            
+            <view class="management_Fee">
+              <view>管理费</view>
+              <view>{{item.management_Fee}}</view>
+            </view>
+            <view class="network_Fee">
+              <view>网络费</view>
+              <view>{{item.network_Fee}}</view>
+            </view>
+            <view class="cleaning_Fee">
+              <view>清洁费</view>
+              <view>{{item.cleaning_Fee}}</view>
+            </view>
+            <view class="gas_Fee">
+              <view>天然气费</view>
+              <view>{{item.gas_Fee}}</view>
+            </view>
+          </view>
+
           <view class="line"></view>
           <view class="allmoney">
             <view class="zongjine iconfont icon-renminbi">总金额</view>
@@ -77,8 +96,6 @@
               <view class="date">{{item.date}}</view>
           </view>
 
-      
-         
      </view>
   </view>
   

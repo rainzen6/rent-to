@@ -3,7 +3,7 @@ page{
 
 }
 .bg{
-  background-color: #bfe2ec;
+  background-color: #fff;
   width: 100%;
   height: 100%;
   display: flex;
@@ -13,49 +13,111 @@ page{
 .tabbox{
    width: 100%;
    height: 10%;
-   background-color: red;
+   background-color: #fff;
    display: flex;
    justify-content: space-around;
    align-items: center;
+   border-bottom: 1rpx solid rgb(241, 241, 241);
+}
+.Blocks{
+  display: flex;
+  justify-content: space-between;
+   align-items: center;
+   
+   width: 180rpx;
 }
 .addBlocksBox{
   width: 80rpx;
   height: 80rpx;
   display: flex;
-  background-color: teal;
+  background: rgb(255,255,255);
+background: linear-gradient(209deg, rgba(255,255,255,1) 0%, rgba(111,190,227,1) 54%);
+box-shadow:
+  0.7px 1.4px 2.9px rgba(0, 0, 0, 0.022),
+  1.7px 3.5px 7.3px rgba(0, 0, 0, 0.031),
+  3.5px 7.1px 14.9px rgba(0, 0, 0, 0.039),
+  7.3px 14.6px 30.7px rgba(0, 0, 0, 0.048),
+  20px 40px 84px rgba(0, 0, 0, 0.07)
+;
   justify-content: center;
   align-items: center;
-
+  border-radius: 50%;
+  
 }
 .icon-tianjialoudong{
    font-size: 50rpx;
    color: white;
+   
+}
+.deleteBlocksBox{
+  width: 80rpx;
+  height: 80rpx;
+  display: flex;
+  
+background: rgb(255,255,255);
+background: linear-gradient(209deg, rgba(255,255,255,1) 0%, rgba(245,183,214,1) 53%);
+box-shadow:
+  0.7px 1.4px 2.9px rgba(0, 0, 0, 0.022),
+  1.7px 3.5px 7.3px rgba(0, 0, 0, 0.031),
+  3.5px 7.1px 14.9px rgba(0, 0, 0, 0.039),
+  7.3px 14.6px 30.7px rgba(0, 0, 0, 0.048),
+  20px 40px 84px rgba(0, 0, 0, 0.07)
+;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.icon-jinyongcangku{
+  font-size: 50rpx;
+   color: white;
 }
 .selectbox{
-  width: 60%;
+  width: 50%;
   height: 80rpx;
-  background-color: thistle;
-
+  background-color: #fff;
+  border-radius: 50rpx;
+  border: 4rpx solid rgb(187, 187, 187);
+  box-shadow:
+  0.7px 1.4px 2.9px rgba(0, 0, 0, 0.022),
+  1.7px 3.5px 7.3px rgba(0, 0, 0, 0.031),
+  3.5px 7.1px 14.9px rgba(0, 0, 0, 0.039),
+  7.3px 14.6px 30.7px rgba(0, 0, 0, 0.048),
+  20px 40px 84px rgba(0, 0, 0, 0.07)
+;
 }
 .picker{
-  background-color: rgb(238, 231, 141);
   width: 100%;
   height: 80rpx;
-
+}
+.blocknamebox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .blockname{
-  background-color: rgb(96, 114, 221);
+  
   width: 100%;
   height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 .addroom{
-  background-color: yellowgreen;
+  background: rgb(255,255,255);
+background: linear-gradient(209deg, rgba(255,255,255,1) 0%, rgba(61,255,184,1) 53%);
   display: flex;
   width: 80rpx;
   height: 80rpx;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
+  box-shadow:
+  0.7px 1.4px 2.9px rgba(0, 0, 0, 0.022),
+  1.7px 3.5px 7.3px rgba(0, 0, 0, 0.031),
+  3.5px 7.1px 14.9px rgba(0, 0, 0, 0.039),
+  7.3px 14.6px 30.7px rgba(0, 0, 0, 0.048),
+  20px 40px 84px rgba(0, 0, 0, 0.07);
 
 }
 .rentorname{
@@ -72,30 +134,311 @@ page{
   position: fixed;
   top: 300rpx;
   left: 75rpx;
+  border: 6rpx solid rgb(220, 238, 255);
+  border-radius: 30rpx;
 }
-.icon-cangkuqueren{
-  width: 50rpx;
-  height: 50rpx;
-  font-size: 50rpx;
+
+
+.add_blockModalBox{
+  width: 80%;
+  height: 40%;
+  background-color: #fff;
+  position: fixed;
+  top: 300rpx;
+  left: 75rpx;
+  border: 6rpx solid rgb(220, 238, 255);
+  border-radius: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.blocktitle{
+  font-size: 40rpx;
+  color:rgb(112,162,235) ;
+
+
+}
+.blockmain_inputbox{
+  display: flex;
+  flex-direction: column;
+
+}
+.blockinputtitle{
+  font-size: 30rpx;
+  font-weight: 550;
+  color: rgb(153, 153, 153);
+  margin: 10rpx;
+}
+.blockinput_field{
+  width: 350rpx;
+  height: 70rpx;
+ border: 5rpx solid rgb(78, 78, 78);
+ border-radius: 30rpx;
+ display: flex;
+ justify-content: center;
+  align-items: center;
+}
+.blockbtn{
+  display: flex;
+  flex-direction: row;
+  width: 500rpx;
+  height: 100rpx;
+  justify-content: space-around;
+  align-items: center;
+}
+.cancel_blockbtn{
+  
+  width: 150rpx;
+  height: 60rpx;
+  background: rgb(224,225,235);
+background: linear-gradient(267deg, rgba(224,225,235,1) 0%, rgba(212,142,227,1) 35%, rgba(255,0,95,1) 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rpx;
 }
 .icon-quxiao{
-  width: 50rpx;
-  height: 50rpx;
   font-size: 50rpx;
+  color:#fff;
+}
+.canceltitle{
+  font-weight: 550;
+  font-size: 30rpx;
+  color:#fff;
+}
+.confirm_blockbtn{
+  width: 150rpx;
+  height: 60rpx;
+  background: rgb(112,235,134);
+background: linear-gradient(267deg, rgba(112,235,134,1) 0%, rgba(0,255,243,1) 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rpx;
+}
+.icon-cangkuqueren{
+  font-size: 50rpx;
+  color:#fff;
+}
+.confirmtitle{
+  font-weight: 550;
+  font-size: 30rpx;
+  color:#fff;
+}
+
+.add_rentorModalbox{
+  width: 80%;
+  height: 50%;
+  background-color: #fff;
+  position: fixed;
+  top: 300rpx;
+  left: 75rpx;
+  border: 6rpx solid rgb(220, 238, 255);
+  border-radius: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 
+.rentor_bigtitle{
+  font-size: 30rpx;
+  color:rgb(112, 235, 188) ;
 
 
+}
+.rentor_block_title{
+  display: flex;
+  flex-direction: column;
+  
+  width: 400rpx;
+
+}
+
+.rentor_block_name{
+  font-size: 30rpx;
+  font-weight: 550;
+  color: rgb(153, 153, 153);
+  margin: 10rpx;
+}
+
+.rentor_blockname_field{
+  width: 350rpx;
+  height: 70rpx;
+ border: 5rpx solid rgb(78, 78, 78);
+ border-radius: 30rpx;
+ display: flex;
+ justify-content: center;
+  align-items: center;
+  
+}
+
+.rentornamebox{
+  display: flex;
+  flex-direction: column;
+  
+  width: 400rpx;
+
+}
+
+.rentortitle{
+  font-size: 30rpx;
+  font-weight: 550;
+  color: rgb(153, 153, 153);
+  margin: 10rpx;
+}
+
+.rentor_field{
+
+  width: 350rpx;
+  height: 70rpx;
+ border: 5rpx solid rgb(78, 78, 78);
+ border-radius: 30rpx;
+ display: flex;
+ justify-content: center;
+  align-items: center;
+  
+}
+
+.roomidbox{
+  display: flex;
+  flex-direction: column;
+  
+  width: 400rpx;
+}
+
+.roomidtitle{
+  font-size: 30rpx;
+  font-weight: 550;
+  color: rgb(153, 153, 153);
+  margin: 10rpx;
+}
+
+.roomid_field{
+  width: 350rpx;
+  height: 70rpx;
+ border: 5rpx solid rgb(78, 78, 78);
+ border-radius: 30rpx;
+ display: flex;
+ justify-content: center;
+  align-items: center;
+}
+
+.rentorbtn{
+  display: flex;
+  flex-direction: row;
+  width: 500rpx;
+  height: 100rpx;
+  justify-content: space-around;
+  align-items: center;
+}
+.confirm_rentorbtn{
+
+  width: 150rpx;
+  height: 60rpx;
+  background: rgb(112,235,134);
+background: linear-gradient(267deg, rgba(112,235,134,1) 0%, rgba(0,255,243,1) 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rpx;
+}
+
+.cancel_rentorbtn{
+
+  width: 150rpx;
+  height: 60rpx;
+  background: rgb(224,225,235);
+background: linear-gradient(267deg, rgba(224,225,235,1) 0%, rgba(212,142,227,1) 35%, rgba(255,0,95,1) 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rpx;
+}
+.icon-weibiaoti--{
+  color:#fff;
+}
+.house_listbox{
+  display: flex;
+  flex-wrap: wrap;
+  
+  margin: 10rpx ;
+  
+}
+
+.house_list{
+  
+  
+  display: flex;
+  width: 160rpx;
+  height: 200rpx;
+  justify-content: center;
+  align-items: center;
+  margin: 10rpx;
+
+}
+.item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 5rpx solid rgb(241, 241, 241);
+  border-radius: 30rpx;
+  background-color: #fff;
+
+}
 .icon-fangwu{
   display: inline;
   font-size: 100rpx;
-  background-color: rgb(139, 235, 171);
   color: aqua;
 }
 .roomid{
   display: inline-block;
-  color: red;
+  color: #fff;
   background-color: rgb(139, 180, 235);
   font-size: 30rpx;
+  border-radius:10rpx ;
+}
+.icon-a-shouyezhuyefangzi{
+  font-size: 90rpx;
+  color: rgb(226, 226, 226);
+}
+.Modalbox{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.fixbtn{
+  width: 500rpx;
+ display: flex;
+ justify-content: space-around;
+  align-items: center;
+}
+.deletebtn{
+   display: flex;
+ 
+  justify-content: center;
+  align-items: center;
+  background: rgb(235,175,92);
+background: linear-gradient(218deg, rgba(235,175,92,1) 0%, rgba(204,202,24,1) 35%, rgba(0,254,255,1) 100%);
+width: 150rpx;
+height: 60rpx;
+border-radius: 10rpx;
+
+}
+.icon-delete-person{
+  color: #fff;
+}
+.deletetitle{
+  color: #fff;
+  font-weight: 550;
 }

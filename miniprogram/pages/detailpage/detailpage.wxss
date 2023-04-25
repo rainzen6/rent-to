@@ -132,7 +132,7 @@
 }
 .elect{
   display: flex;
-  height: 13%;
+  height: 12%;
   align-items: center;
   justify-content: space-around;
   font-weight: 700;
@@ -159,10 +159,40 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 14%;
+  height: 10%;
   font-weight: 700;
   color: rgba(0, 0, 0,.5);
   text-shadow: 1rpx 1rpx 3rpx rgba(255,255,255,.7);
+}
+.other_expense{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 10%;
+  font-weight: 700;
+  color: rgba(0, 0, 0,.5);
+  text-shadow: 1rpx 1rpx 3rpx rgba(255,255,255,.7);
+}
+.management_Fee{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.network_Fee{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cleaning_Fee{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gas_Fee{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .allmoney{
   display: flex;
@@ -177,7 +207,7 @@
 
 .time{
   display: flex;
-  height: 20%;
+  height: 15%;
   align-items: center;
   
   justify-content:space-around;
