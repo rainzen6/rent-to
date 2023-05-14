@@ -142,7 +142,7 @@
           <view class="{{inpclass==0?'title':'notitle'}} " wx:if="{{exitem[index].exid==0}}">管理费</view>
           <view class="{{inpclass==1?'title':'notitle'}}" wx:if="{{exitem[index].exid==1}}">网络费</view>
           <view class="{{inpclass==2?'title':'notitle'}}" wx:if="{{exitem[index].exid==2}}">清洁费</view>
-          <view class="{{inpclass==3?'title':'notitle'}}" wx:if="{{exitem[index].exid==3}}">天然气费</view>
+          <view class="{{inpclass==3?'title':'notitle'}}" wx:if="{{exitem[index].exid==3}}">天然气管道使用费</view>
            <view class="other_expence_delete iconfont icon-shanchu-01"  data-id="{{index}}" bindtap="deleteInput"></view>
       </view>
      

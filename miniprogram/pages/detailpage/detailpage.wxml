@@ -80,7 +80,7 @@
               <view>{{item.cleaning_Fee}}</view>
             </view>
             <view class="gas_Fee">
-              <view>天然气费</view>
+              <view>天然气管道使用费</view>
               <view>{{item.gas_Fee}}</view>
             </view>
           </view>

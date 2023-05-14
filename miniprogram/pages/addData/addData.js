@@ -54,7 +54,7 @@ Page({
   
       },{
         exid:3,
-        Cname:'天然气费',
+        Cname:'天然气管道使用费',
         name:'gas_Fee'
   
       }],

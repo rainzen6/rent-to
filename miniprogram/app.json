@@ -14,7 +14,9 @@
     "pages/sendmessage/sendmessage",
     "pages/ec-canvas",
     "pages/charts/charts",
-    "pages/block/block"
+    "pages/block/block",
+    "pages/help",
+    "pages/helpyou/helpyou"
   ],
   "window": {
     "backgroundTextStyle": "dark",

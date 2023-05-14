@@ -1,5 +1,5 @@
 const app=getApp()
-const db= wx.cloud.database()
+
 Page({
 
   /**
@@ -139,7 +139,7 @@ Page({
 
       var listmonth = this.data.listmonth
       console.log('账单查询获取到的月',listmonth)
-      let count = await  db.collection("demolist").where({
+      let count = await  wx.cloud.database().collection("demolist").where({
         _openid:app.globalData.openid,
        
         
@@ -149,7 +149,7 @@ Page({
         console.log('记录数',count)
         let all = []
         for(let i = 0; i < count ; i+=20){
-          let list = await db.collection("demolist").skip(i).orderBy('createTime','desc').where({
+          let list = await wx.cloud.database().collection("demolist").skip(i).orderBy('createTime','desc').where({
             _openid:app.globalData.openid,
             year,
             month:nowmonth
@@ -177,7 +177,7 @@ Page({
     console.log('当前时间的本月',month)
     var listmonth = this.data.listmonth
     console.log('账单查询获取到的月',listmonth)
-    let count = await  db.collection("demolist").where({
+    let count = await  wx.cloud.database().collection("demolist").where({
       _openid:app.globalData.openid,
      
       
@@ -187,7 +187,7 @@ Page({
       console.log('记录数',count)
       let all = []
       for(let i = 0; i < count ; i+=20){
-        let list = await db.collection("demolist").skip(i).orderBy('createTime','desc').where({
+        let list = await wx.cloud.database().collection("demolist").skip(i).orderBy('createTime','desc').where({
           _openid:app.globalData.openid,
           year,
           month:listmonth
@@ -228,7 +228,7 @@ Page({
       success (res) {
         if (res.confirm) {
           console.log('用户点击确定')
-          db.collection('demolist').doc(id).remove({
+          wx.cloud.database().collection('demolist').doc(id).remove({
             success: function(res) {
               console.log(res.data)
               wx.showToast({
@@ -247,7 +247,7 @@ Page({
   paymentfalse:function(e){
     console.log(e.currentTarget.dataset.id)
     let id = e.currentTarget.dataset.id
-    db.collection("demolist").doc(id)
+    wx.cloud.database().collection("demolist").doc(id)
     .update({
       data:{
         payment:"true"
@@ -269,7 +269,7 @@ Page({
   paymenttrue:function(e){
     console.log(e.currentTarget.dataset.id)
     let id = e.currentTarget.dataset.id
-    db.collection("demolist").doc(id)
+    wx.cloud.database().collection("demolist").doc(id)
     .update({
       data:{
         payment:"false"

@@ -1,9 +1,7 @@
 
-
 <view class="bg"> 
  <view class="box">
    <view class="bar"></view>
-
    <view class="title">
    <view class="bar2"></view>
      <view class="iconbg">
@@ -27,7 +25,7 @@
           <view class="iconfont icon-tianjiazhangdan"></view>
           <view class="addbtn">添加</view>
        </view>
-       
+
      </view>
      <view class="bar3"></view>
      <view class="zhangdan">
@@ -40,9 +38,7 @@
           <view class="weishoukuan">未收款账单</view>
        </view>
      </view>
-    
    </view>
-
  </view>
 </view>
 

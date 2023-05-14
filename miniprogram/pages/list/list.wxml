@@ -1,11 +1,5 @@
 <view class='container'>
-  
-
-
             <view class="Yearbar">
-
-             
-
              <view class="year_choice_bar">
               <picker class="picker" name="year" mode="date"  fields="year" value="{{date}}" start="2015" end="2030" bindchange="bindDateChange">
                 <view class="in_bar">
@@ -17,16 +11,10 @@
                           {{year}}
                         </view> 
                     </view>
-                    
-                 
-                
                 </view>    
               </picker>
             </view>
           </view>
-   
-
-
   <view class='index_tab'>
       <scroll-view class="bottom_scroll" scroll-x="true" scroll-left="{{x}}" scroll-with-animation="{{true}}">
          <view class='nav {{item.month_id == month_id?"cur":""}}' wx:for="{{nav_list}}"  wx:key="month_id"  data-id="{{item.month_id}}"
@@ -90,7 +78,6 @@
       </view>    
         
       <view class="right"> 
-          
           <view class="xq " bindtap="godetail" data-id="{{item._id}}">
             <view class="iconfont icon-zhangdanxiangqing"></view>
           </view>
@@ -98,11 +85,7 @@
           <view class="delete " bindtap="delete_business" data-id="{{item._id}}">
             <view class="iconfont icon-shanchu"></view>
           </view>
-      </view>      
-              
-              
-          
-          
+      </view>       
     </view>
   </view>
   
